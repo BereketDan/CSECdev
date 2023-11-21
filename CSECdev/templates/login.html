@@ -7,20 +7,55 @@
     {% load static %}
     <link rel="stylesheet" href="{% static "css/bulma.css" %}">
     <style>
+            
+      img {  
+          animation-name: floating;
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
+          animation-timing-function: ease-in-out;
+          margin-left: 30px;
+          margin-top: 5px;
+      }
+      
+      @keyframes floating {
+          0% { transform: translate(0,  0px); }
+          50%  { transform: translate(0, 15px); }
+          100%   { transform: translate(0, -0px); }    
+      }
       @media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
+        #cont{
+          margin-top: -13px;
+          background-color: ;
+        }
+        #second-col{
+          margin-top: -13px;
+          padding-right:40px;
+          padding-left:40px ;
+
+          height: auto;
+        }
+        #logTxt{
+        padding-top: -10px;
+        font-size: medium;
+        }
+     
+        img{
+          padding-bottom: 5%;
+        }
+        button{
+          width: 100vw;
+        }
+
 }
     </style>
 
   </head>
-  <body  style="background-color:#080B15; height: 100vh auto;">
+  <body  style="background-color:#080B15; height: 100vh auto;" >
     <section class="section is-responsive">
         <div class="container is-responsive">
             <center>
             <div class="columns  ">
-                <div class="column is-three-fifths has-text-white is-size-1 mt-5">
+                <div class="column is-three-fifths has-text-white is-size-1 mt-5" id="cont">
                   CSEC DEV
                   <div class="subtitle" style="color: #3e455f;">Management Website</div>
                   <div class="columns mt-4">
@@ -31,7 +66,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="column is-rounded is-two-fifths  box is-vcentered is-centered"  style="background-color: #151B2D; height: 90vh; border-radius: 20px;">
+                <div class="column is-rounded is-two-fifths  box is-vcentered is-centered second-col"  style="background-color: #151B2D; height: 90vh; border-radius: 20px;" id="second-col">
                 
 
                  <!-- <div class="columns is-centered">
@@ -43,9 +78,9 @@
 
                 <div class="columns is-centered">
                   
-                  <div class="column is-half">
+                  <div class="column is-half" id="logTxt">
                
-                      <div class="column has-text-white has-text-weight-semibold is-size-4 p-5 mt-6" >
+                      <div class="column has-text-white has-text-weight-semibold is-size-4 p-5 mt-6"  >
                        Login to your account
                       </div>
                   </div>
@@ -54,9 +89,9 @@
                 
                 <div class="columns is-centered">
                   
-                  <div class="column is-half">
+                  <div class="column is-half" >
                
-                      <div class="is-size-7 has-text-left mt-5 " style="color: #ffffff;">
+                      <div class="is-size-7 has-text-left mt-5 " style="color: #ffffff;" >
                        Username
                       </div>
                   </div>
@@ -91,7 +126,7 @@
                 <div class="columns is-centered">
                   <div class="column is-half">
                
-                      <div class="">
+                      <div>
                         <input class="input is-rounded" type="password"  style="background-color: #151B2D; color:#ffffff ">
                       </div>
                   </div>
@@ -118,8 +153,8 @@
                   <div class="column ">
                
 
-                    <div >
-                    <button class="button is-rounded" style="background-color: #577CFF; color: white; border: none; width: 50%;"><div class="is-size-7">Login</div></button>
+                    <div id="btn">
+                    <button class="button is-rounded" style="background-color: #577CFF; color: white; border: none; width: 50%;" ><div class="is-size-7">Login</div></button>
                     </div>
                    
                   </div>
