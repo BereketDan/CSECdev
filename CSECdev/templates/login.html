@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CSEC | Login</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static "css/bulma.css" %}">
+ 
     <style>
-            
+        
+    
       img {  
           animation-name: floating;
           animation-duration: 3s;
@@ -19,7 +19,7 @@
       
       @keyframes floating {
           0% { transform: translate(0,  0px); }
-          50%  { transform: translate(0, 15px); }
+          50%  { transform: translate(0, 20px); }
           100%   { transform: translate(0, -0px); }    
       }
       @media only screen and (max-width: 600px) {
@@ -35,20 +35,22 @@
           height: auto;
         }
         #logTxt{
-        padding-top: -10px;
-        font-size: medium;
+    
+        font-size: 2.3rem;
         }
      
         img{
-          padding-bottom: 5%;
+          padding-bottom: 10%;
         }
-        button{
+        #btn{
           width: 100vw;
         }
 
 }
     </style>
-
+       {% load static %}
+   
+     <link rel="stylesheet" href="{% static "css/bulma/css/bulma.css" %}">
   </head>
   <body  style="background-color:#080B15; height: 100vh auto;" >
     <section class="section is-responsive">
@@ -78,16 +80,16 @@
 
                 <div class="columns is-centered">
                   
-                  <div class="column is-half" id="logTxt">
+                  <div class="column is-half" >
                
-                      <div class="column has-text-white has-text-weight-semibold is-size-4 p-5 mt-6"  >
+                      <div class="column has-text-white has-text-weight-semibold is-size-4 pt-5 mt-6" id="logTxt" >
                        Login to your account
                       </div>
                   </div>
 
                 </div>
                 
-                <div class="columns is-centered">
+                <!-- <div class="columns is-centered">
                   
                   <div class="column is-half" >
                
@@ -96,15 +98,15 @@
                       </div>
                   </div>
 
-                </div>
+                </div> -->
 
                 
-               
+                <form action="" method="">
                 <div class="columns is-centered ">
                   <div class="column is-half">
                
                       <div class="subtitle">
-                        <input class="input is-rounded has-text-white" type="text"  style="background-color: #151B2D;">
+                        <input class="input is-rounded has-text-white" type="text" placeholder="Username" style="background-color: #151B2D; ">
                       </div>
                   </div>
 
@@ -112,7 +114,7 @@
 
                 </div>
 
-                <div class="columns is-centered">
+                <!-- <div class="columns is-centered">
                   
                   <div class="column is-half">
                
@@ -121,13 +123,13 @@
                       </div>
                   </div>
 
-                </div>
+                </div> -->
 
                 <div class="columns is-centered">
                   <div class="column is-half">
                
                       <div>
-                        <input class="input is-rounded" type="password"  style="background-color: #151B2D; color:#ffffff ">
+                        <input class="input is-rounded" type="password" placeholder="Password" style="background-color: #151B2D; color:#ffffff ">
                       </div>
                   </div>
 
@@ -153,8 +155,8 @@
                   <div class="column ">
                
 
-                    <div id="btn">
-                    <button class="button is-rounded" style="background-color: #577CFF; color: white; border: none; width: 50%;" ><div class="is-size-7">Login</div></button>
+                    <div >
+                    <button class="button is-rounded " style="background-color: #577CFF; color: white; border: none; width: 50%; " ><div class="is-size-7" id="btn">Login</div></button>
                     </div>
                    
                   </div>
@@ -162,6 +164,7 @@
               
 
                 </div>
+              </form>
                 </div>
               
               </div>
