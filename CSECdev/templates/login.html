@@ -6,7 +6,13 @@
     <title>CSEC | Login</title>
     {% load static %}
     <link rel="stylesheet" href="{% static "css/bulma.css" %}">
-
+    <style>
+      @media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+    </style>
 
   </head>
   <body  style="background-color:#080B15; height: 100vh auto;">
@@ -14,13 +20,13 @@
         <div class="container is-responsive">
             <center>
             <div class="columns  ">
-                <div class="column is-three-fifths has-text-white is-size-1 mt-6">
+                <div class="column is-three-fifths has-text-white is-size-1 mt-5">
                   CSEC DEV
-                  <div class="subtitle" style="color: #343b51;">Management Website</div>
-                  <div class="columns mt-6">
+                  <div class="subtitle" style="color: #3e455f;">Management Website</div>
+                  <div class="columns mt-4">
                     <div class="column">
                 
-                        <img src="{% static "images/new.png" %}" style="width: 60%;">
+                        <img src="{% static "images/sec.png" %}" style="width: 55%;">
                         
                     </div>
                   </div>
@@ -50,7 +56,7 @@
                   
                   <div class="column is-half">
                
-                      <div class="is-size-7 has-text-left mt-5 has-text-white">
+                      <div class="is-size-7 has-text-left mt-5 " style="color: #ffffff;">
                        Username
                       </div>
                   </div>
@@ -113,7 +119,7 @@
                
 
                     <div >
-                    <button class="button is-rounded" style="background-color: #577CFF; color: white; border: none; width: 50%;">Login</button>
+                    <button class="button is-rounded" style="background-color: #577CFF; color: white; border: none; width: 50%;"><div class="is-size-7">Login</div></button>
                     </div>
                    
                   </div>
