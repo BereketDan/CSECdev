@@ -3,22 +3,128 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>CSEC | Login</title>
     {% load static %}
     <link rel="stylesheet" href="{% static "css/bulma.css" %}">
 
 
   </head>
-  <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
-    </div>
-  </section>
+  <body  style="background-color:#080B15; height: 100vh auto;">
+    <section class="section is-responsive">
+        <div class="container is-responsive">
+            <center>
+            <div class="columns  ">
+                <div class="column is-three-fifths has-text-white is-size-1 mt-6">
+                  CSEC DEV
+                  <div class="subtitle" style="color: #343b51;">Management Website</div>
+                  <div class="columns mt-6">
+                    <div class="column">
+                
+                        <img src="{% static "images/new.png" %}" style="width: 60%;">
+                        
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-rounded is-two-fifths  box is-vcentered is-centered"  style="background-color: #151B2D; height: 90vh; border-radius: 20px;">
+                
+
+                 <!-- <div class="columns is-centered">
+                  <div class="">
+                      Login
+                  </div>
+                </div> -->
+
+
+                <div class="columns is-centered">
+                  
+                  <div class="column is-half">
+               
+                      <div class="column has-text-white has-text-weight-semibold is-size-4 p-5 mt-6" >
+                       Login to your account
+                      </div>
+                  </div>
+
+                </div>
+                
+                <div class="columns is-centered">
+                  
+                  <div class="column is-half">
+               
+                      <div class="is-size-7 has-text-left mt-5 has-text-white">
+                       Username
+                      </div>
+                  </div>
+
+                </div>
+
+                
+               
+                <div class="columns is-centered ">
+                  <div class="column is-half">
+               
+                      <div class="subtitle">
+                        <input class="input is-rounded has-text-white" type="text"  style="background-color: #151B2D;">
+                      </div>
+                  </div>
+
+              
+
+                </div>
+
+                <div class="columns is-centered">
+                  
+                  <div class="column is-half">
+               
+                      <div class="is-size-7 has-text-left p-0  has-text-white has-text-weight-normal">
+                       Password
+                      </div>
+                  </div>
+
+                </div>
+
+                <div class="columns is-centered">
+                  <div class="column is-half">
+               
+                      <div class="">
+                        <input class="input is-rounded" type="password"  style="background-color: #151B2D; color:#ffffff ">
+                      </div>
+                  </div>
+
+              
+
+                </div>
+
+
+
+                <div class="columns is-centered">
+                  
+                  <div class="column is-half">
+               
+                      <div class="is-size-7 has-text-right  has-text-link">
+                        Forget Password ?
+                      </div>
+                  </div>
+
+                </div>
+
+
+                <div class="columns is-centered">
+                  <div class="column ">
+               
+
+                    <div >
+                    <button class="button is-rounded" style="background-color: #577CFF; color: white; border: none; width: 50%;">Login</button>
+                    </div>
+                   
+                  </div>
+
+              
+
+                </div>
+                </div>
+              
+              </div>
+            </center>
+      </section>
   </body>
 </html>
