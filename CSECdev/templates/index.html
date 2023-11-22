@@ -2,5 +2,132 @@
 
 {% load static %}
 {% block content %}
-This is the content
+<center>
+    <div class="columns  ">
+        <div class="column is-three-fifths has-text-white is-size-1 mt-5" id="cont">
+          CSEC DEV
+          <div class="subtitle" style="color: #3e455f;">Management Website</div>
+          <div class="columns mt-4">
+            <div class="column">
+        
+                <img src="{% static "images/sec.png" %}" style="width: 55%;">
+                
+            </div>
+          </div>
+        </div>
+        <div class="column is-rounded is-two-fifths  box is-vcentered is-centered second-col"  style="background-color: #151B2D; height: 80vh; border-radius: 20px;" id="second-col">
+        
+
+         <!-- <div class="columns is-centered">
+          <div class="">
+              Login
+          </div>
+        </div> -->
+
+
+        <div class="columns is-centered">
+          
+          <div class="column is-half" >
+       
+              <div class="column has-text-white has-text-weight-semibold is-size-4 pt-5 mt-6" id="logTxt" >
+               Welcome | CSEC 
+              </div>
+          </div>
+
+        </div>
+    <div class="columns is-centered">
+          
+          <div class="column is-half" >
+       
+              <div class="is-size-7 has-text-centered mt-5 " style="color: rgb(133, 133, 133);" >
+                Login to your account to countinue
+              </div>
+          </div>
+
+        </div> 
+
+        
+        <form action="" method="">
+        <div class="columns is-centered ">
+          <div class="column is-half">
+       
+              <div class="subtitle">
+                <input class="input is-rounded has-text-white" type="text" placeholder="Username" style="background-color: #151B2D; ">
+              </div>
+          </div>
+
+      
+
+        </div>
+
+        <!-- <div class="columns is-centered">
+          
+          <div class="column is-half">
+       
+              <div class="is-size-7 has-text-left p-0  has-text-white has-text-weight-normal">
+               Password
+              </div>
+          </div>
+
+        </div> -->
+
+        <div class="columns is-centered">
+          <div class="column is-half">
+       
+              <div>
+                <input class="input is-rounded has-text-grey-light" type="password" placeholder="Password" style="background-color: #151B2D; color:#ffffff ">
+              </div>
+          </div>
+
+      
+
+        </div>
+
+
+
+        <div class="columns is-centered">
+          
+          <div class="column is-half">
+       
+              <div class="is-size-7 has-text-right  has-text-link">
+                Forget Password ?
+              </div>
+          </div>
+
+        </div>
+
+
+        <div class="columns is-centered">
+          <div class="column ">
+       
+
+            <div >
+            <button class="button is-rounded " style="background-color: #577CFF; color: white; border: none; width: 50%; " ><div class="is-size-7" id="btn">Login</div></button>
+            </div>
+           
+          </div>
+
+      
+
+        </div>
+      </form>
+
+      <div class="columns is-centered">
+          
+        <div class="column is-half">
+     
+            <div class="is-size-7 has-text-centered  has-text-grey">
+              Don't have an account ?
+            </div>
+        </div>
+
+      </div>
+        </div>
+      
+      </div>
+    </center>
+
+
+
+
 {% endblock %}
