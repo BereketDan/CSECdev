@@ -1,0 +1,106 @@
+<style>
+     
+     
+   
+     
+    .table td {
+      font-size: 17px;
+      border: none
+    }
+ 
+    .table th {
+      font-size: 17px;
+      border: none
+    }
+  </style>
+
+
+
+
+
+
+<div class="columns">
+    <div class="column is-three-fifths has-text-white  mt-5">
+        <div class="columns">
+            <div class="column">
+              <div>
+                <input class="input is-rounded has-text-grey-light is-full" type="password" placeholder="Password" style="background-color: #151B2D; color:#ffffff; border-color:  #151B2D;">
+              </div>
+            </div>
+            <div class="column">
+              
+                <div>
+                    <input class="input is-rounded has-text-grey-light is-full" type="password" placeholder="Password" style="background-color: #151B2D; color:#ffffff; border-color:  #151B2D;">
+                  </div>
+            </div>
+            <div class="column">
+                <div >
+                    <button class="button is-rounded is-fullwidth " style="background-color: #577CFF; color: white; border: none; width: 50%; " ><div class="is-size-7" id="btn">Search</div></button>
+                    </div>
+                   
+            </div>
+         
+          </div>
+  <table class="table  is-rounded " style="width: 95%; background-color:#080B15 ;">
+    <thead class="has-text-white is-rounded">
+      <tr  class=" is-rounded" style="background-color: #151B2D;">
+        <th><abbr style="color: #6e82bc;" >Username</abbr></th>
+        <th><abbr   style="color: #6e82bc;">ID</abbr></th>
+        <th><abbr   style="color: #6e82bc;">Year</abbr></th>
+        <th><abbr   style="color: #6e82bc;">Department</abbr></th>
+        <th><abbr   style="color: #6e82bc;">Skill</abbr></th>
+        <th><abbr   style="color: #6e82bc;" >Action</abbr></th>
+        
+
+      </tr>
+    </thead>
+
+    <tbody class="tb" >
+      <tr style="color: #6c717e;">
+      
+        <td  >Bereket Daniel </td>
+        <td class="">UGR/25430/12 </td>
+        <td class=" ">Third</td>
+        <td class=" ">CSE</td>
+        <td class=" ">Bot Developer</td>
+        <td ><a href="" id="paid-btn" class="button is-fullwidth " style="background-color: #6e82bc;">Update</a> </td>
+     
+        
+  
+      </tr>
+      <tr style="color: #6c717e;">
+      
+        <td  >Abel Adane </td>
+        <td class="">UGR/25430/12 </td>
+        <td class=" ">Third</td>
+        <td class=" ">SE</td>
+        <td class=" ">UI/UX Designer</td>
+        <td ><a href="" id="paid-btn" class="button is-fullwidth " style="background-color: #6e82bc;">Update</a> </td>
+     
+        
+  
+      </tr>
+
+      <tr style="color: #6c717e;">
+      
+        <td  >Salem Mesfin </td>
+        <td class="">UGR/25430/12 </td>
+        <td class=" ">Third</td>
+        <td class=" ">CSE</td>
+        <td class=" ">FullStuck</td>
+        <td ><a href="" id="paid-btn" class="button is-fullwidth " style="background-color: #6e82bc;">Update</a> </td>
+     
+        
+  
+      </tr>
+     
+   
+
+    </tbody>
+  </table>
+    </div>
+    <div class="column is-rounded is-two-fifths  box is-vcentered is-centered" style="background-color: #151B2D; height: 80vh; border-radius: 20px;" >
+      Second column
+    </div>
+
+  </div>
