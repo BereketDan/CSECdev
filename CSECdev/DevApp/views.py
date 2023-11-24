@@ -12,8 +12,8 @@ def base(request):
     return render(request, "base.html")
 
 
-def index(request):
-    return render(request, "index.html")
+def member(request):
+    return render(request, "member.html")
 
 def feedback(request):
     return render(request, "feedback.html")
