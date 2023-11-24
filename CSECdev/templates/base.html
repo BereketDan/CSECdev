@@ -10,7 +10,50 @@
    
      <link rel="stylesheet" href="{% static "css/bulma/css/bulma.css" %}">
      <style>
+
+@keyframes slideFromTop {
+  0% {
+    opacity: 0; /* Start with 0 opacity (hidden) */
+  }
+  100% {
+    opacity: 1; /* End with full opacity (visible) */
+  }
+}
+
+#card {
+  animation-name: slideFromTop;
+  animation-duration: 1.5s; /* Duration of animation */
+  animation-timing-function: ease-in-out; /* Smooth easing */
+  animation-fill-mode: forwards; /* Maintain end state after animation */
+
+
   
+}
+    @keyframes colorChange {
+  0% {
+    background-color: #44b7ff; /* Initial color */
+  }
+  25% {
+    background-color: #3a9bdc; /* Intermediate color */
+  }
+  50% {
+    background-color: #5579c6; /* Intermediate color */
+  }
+  75% {
+    background-color: #7885e7; /* Final color */
+  }
+  100% {
+    background-color: rgb(54, 137, 255); /* Final color */
+  }
+}
+
+#iconic {
+  animation-name: colorChange;
+  animation-duration: 1.2s; /* Duration of animation */
+  animation-timing-function:linear;
+  animation-fill-mode:forwards; /* Linear animation timing */
+  animation-iteration-count: infinite; /* Infinite loop */
+}
  
     .table td {
       font-size: 17px;
@@ -21,7 +64,7 @@
       font-size: 17px;
       border: none
     }
-       .navbar-item :hover{
+       .navbar-item a:hover{
     background-color:#151B2D!important;
     border-bottom: 2px solid cornflowerblue ;
     transition: 0.6s;
@@ -103,7 +146,7 @@ $navbarBurgers.forEach( el => {
         <nav class="navbar" role="navigation" aria-label="main navigation" style="background-color:#151B2D; color:white; ">
           <div class="navbar-brand">
             <a class="navbar-item" style="padding-left: 2vw;">
-            <div style="padding-left: 3vw; height: 25px; width: 25px; border-radius: 50px; background-color:cornflowerblue;  align-items: center;"></div>
+            <div style="padding-left: 3vw; height: 25px; width: 25px; border-radius: 50px; background-color:cornflowerblue;  align-items: center;" id="iconic"></div>
           </a>
             <a class="navbar-item" href="">
      
@@ -128,33 +171,41 @@ $navbarBurgers.forEach( el => {
   
   
             <div class="navbar-end">
-              <div class="navbar-item" style="padding-right: 1vw;">
+              <div class="navbar-item" style="padding-right: 1.5vw;">
                 <a class="navbar-item" style="color:cornflowerblue">
                   Member
                 </a>
           
                 <a class="navbar-item" style="color:#586078" >
-                  Feedback
+                 Event
                 </a>
 
                 
                 <a class="navbar-item" style="color:#586078" >
-                  Event
+                  Feedback 
                 </a>
 
                 
                 <a class="navbar-item" style="color:#586078" >
-                  Setting
-                </a>
-    
-    
-                <a class="navbar-item" style="color:#586078" style="padding-right: 10px;">
+                  
                   Dashboard
                 </a>
+    
+    
+                <a class="navbar-item" style="color:#586078; padding-right: 1.5vw">
+                  Setting
+                </a>
           
-                <div class="buttons">
-                  <a class="button " style="border-radius: 10px; background-color:cornflowerblue;  color: rgb(255, 255, 255); border:none;">
-                    <strong style="font-size: 0.9rem; font-weight:normal; padding-left: 10px; padding-right: 10px;">Log out</strong>
+                <div class="buttons" >
+                  <a class="button"  style="border-radius: 60px; background-color:cornflowerblue;  color: rgb(255, 255, 255); border:none;">
+                    <strong style="font-size: 0.7rem; font-weight:normal;  padding-right: 5px;  padding-left: 5px;">  <div style="color: white; font-size: 1.4rem; font-weight: semi bold; float: left; " ><span class="icon-text is-small">
+
+                      <span class="icon is-small">
+                        <img src="{% static "images/logout.png" %}" width="60%">
+                      </span>
+                     
+                    </span>
+                  </div></strong>
                   </a>
                 
                 </div>
@@ -162,7 +213,7 @@ $navbarBurgers.forEach( el => {
             </div>
           </div>
         </nav>
-    <section class="section is-responsive">
+    <section class="section is-responsive" id="card">
   
 
 
@@ -197,6 +248,13 @@ $navbarBurgers.forEach( el => {
 
 
             </center>
+            <br>
+            <div class="content has-text-centered is-size-7 " style="margin-top: 10px; color: #6c717e;">
+              <p>
+                <span style="font-weight: bold;">CSEC Dev</span> Powered by <a href="https://jgthms.com">Bereket Daniel</a>. All right reserved 
+                <a href="http://opensource.org/licenses/mit-license.php">2023/2016</a><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a>.
+              </p>
+            </div>
         </div>
         
       </section>

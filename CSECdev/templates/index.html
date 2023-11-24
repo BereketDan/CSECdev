@@ -7,8 +7,67 @@
 
   
   <script>
+
+           
+document.addEventListener('DOMContentLoaded', () => {
+  // Functions to open and close a modal
+  function openModal($el) {
+    $el.classList.add('is-active');
+  }
+
+  function closeModal($el) {
+    $el.classList.remove('is-active');
+  }
+
+  function closeAllModals() {
+    (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+      closeModal($modal);
+    });
+  }
+
+  // Add a click event on buttons to open a specific modal
+  (document.querySelectorAll('.js-modal') || []).forEach(($trigger) => {
+    const modal = $trigger.dataset.target;
+    const $target = document.getElementById(modal);
+
+    $trigger.addEventListener('click', () => {
+      openModal($target);
+    });
+  });
+
+  // Add a click event on various child elements to close the parent modal
+  (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+    const $target = $close.closest('.modal');
+
+    $close.addEventListener('click', () => {
+      closeModal($target);
+    });
+  });
+
+  // Add a keyboard event to close all modals
+  document.addEventListener('keydown', (event) => {
+    if (event.code === 'Escape') {
+      closeAllModals();
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               
-              document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
   // Functions to open and close a modal
   function openModal($el) {
     $el.classList.add('is-active');
@@ -55,15 +114,135 @@
 
 <div id="modal-js-example"  class="modal">
   <div class="modal-background "></div>
-  <div class="modal-content " style="height: 75vh; border-radius: 10px; background-color:#151B2D;">
+  <div class="modal-content " style="height: 80vh; border-radius: 10px; background-color:#151B2D;">
     <section class="section is-responsive">
 
 
 
       <div class="column">
+        
+        <div class="columns  ">
+                  
+          <div class="column is-three-fifths is-left" >
+<!--        
+              <div class="column has-text-white has-text-weight-normal is-size-5  has-text-left" id="logTxt" >
+               Add User
+              </div> -->
+
+              <span class="icon-text ">
+                <span class="icon mt-3">
+                  <img src="{% static "images/folder.png" %}" >
+                </span>
+                <span class="column has-text-white has-text-weight-normal is-size-4  has-text-left">Add Users</span>
+              </span>
+
+             
+          </div>
+      
+        </div>
 
 
-      </div>
+        <div class="columns is-centered">
+                  
+          <div class="column is-three-fifths" >
+
+            <div class="column"><input name="new_pass" class="input is-rounded is-fullwidth" type="text" placeholder="Username"></div>
+            
+            <div class="column"><input name="new_pass" class="input is-rounded is-fullwidth  pb-2" type="text" placeholder="ID"></div>
+
+             
+            <div class="columns  pl-3 pr-3 pt-2">
+              <div class="column ">
+                  <div class="select  is-rounded  is-fullwidth">
+                      <select name="type_user">
+                          <option>Mechanical </option>
+                          <option>Material</option>
+                          <option>Chemical</option>
+                          <option>Communication</option>
+                          <option>Power</option>
+                          <option>Software</option>
+                          <option>Computer Science </option>
+                          <option>Civil</option>
+                          <option>Architecture</option>
+                          <option>Water</option>
+                          <option>Applide</option>
+              
+                      </select>
+                  </div>
+              </div>
+
+              
+          </div>
+          <div class="columns  pl-3 pr-3 ">
+            <div class="column ">
+                <div class="select  is-rounded  is-fullwidth">
+                    <select name="type_user">
+                        <option>Fisrt</option>
+                        <option>Second </option>
+                        <option>Third</option>
+                        <option>Fourth</option>
+                        <option>Fifth</option>
+                     
+                        
+            
+                    </select>
+                </div>
+            </div>
+
+            
+        </div>
+
+          <div class="columns  pl-3 pr-3 ">
+            <div class="column ">
+                <div class="select  is-rounded  is-fullwidth">
+                    <select name="type_user">
+                        <option>Software Dev</option>
+                        <option>Frontend Dev </option>
+                        <option>Backend Dev</option>
+                        <option>Fullstack Dev</option>
+                        <option>Mobile App Dev</option>
+                        <option>Bot Dev</option>
+                        <option>UI UX Desginer</option>
+                        <option>Game Dev</option>
+                        <option>Database Desginer</option>
+                        <option>Api Dev</option>
+                        
+            
+                    </select>
+                </div>
+            </div>
+
+            
+        </div>
+
+
+        <div class="columns is-centered  pl-3 pr-3 pt-3">
+            <div class="column ">
+        
+
+              <div>
+              <button class="button is-fullwidth is-rounded " style="background-color: #577CFF; color: white; border: none;  " ><div class="is-size-6" id="btn">+ Add User</div></button>
+              </div>
+            
+            </div>
+        </div>
+
+
+
+
+
+        </div>
+
+        
+
+        
+        </div>
+
+
+
+
+
+   
 
       
       </section>
@@ -96,11 +275,171 @@
 
 
 
-  <div style="color: white; font-size: 1.4rem; font-weight: semi bold; float: left; " >User(25)</div>
-  <br>  <br>  
-  
+
+
+
+
+<div id="modal-js"  class="modal">
+  <div class="modal-background "></div>
+  <div class="modal-content " style="height: 80vh; border-radius: 10px; background-color:#151B2D;">
+    <section class="section is-responsive">
+
+
+
+      <div class="column">
+        
+        <div class="columns  ">
+                  
+          <div class="column is-three-fifths is-left" >
+<!--        
+              <div class="column has-text-white has-text-weight-normal is-size-5  has-text-left" id="logTxt" >
+               Add User
+              </div> -->
+
+              <span class="icon-text ">
+                <span class="icon mt-3">
+                  <img src="{% static "images/folder.png" %}" >
+                </span>
+                <span class="column has-text-white has-text-weight-normal is-size-4  has-text-left">Update Users</span>
+              </span>
+
+             
+          </div>
+      
+        </div>
+
+
+        <div class="columns is-centered">
+                  
+          <div class="column is-three-fifths" >
+
+            <div class="column"><input name="new_pass" class="input is-rounded is-fullwidth" type="text" placeholder="Username"></div>
+            
+            <div class="column"><input name="new_pass" class="input is-rounded is-fullwidth  pb-2" type="text" placeholder="ID"></div>
+
+             
+            <div class="columns  pl-3 pr-3 pt-2">
+              <div class="column ">
+                  <div class="select  is-rounded  is-fullwidth ">
+                      <select name="type_user" >
+                          <option class="has-text-info">Mechanical </option>
+                          <option>Material</option>
+                          <option>Chemical</option>
+                          <option>Communication</option>
+                          <option>Power</option>
+                          <option>Software</option>
+                          <option>Computer Science </option>
+                          <option>Civil</option>
+                          <option>Architecture</option>
+                          <option>Water</option>
+                          <option>Applide</option>
+              
+                      </select>
+                  </div>
+              </div>
+
+              
+          </div>
+          <div class="columns  pl-3 pr-3 ">
+            <div class="column ">
+                <div class="select  is-rounded  is-fullwidth">
+                    <select name="type_user">
+                        <option>Fisrt</option>
+                        <option>Second </option>
+                        <option>Third</option>
+                        <option>Fourth</option>
+                        <option>Fifth</option>
+                     
+                        
+            
+                    </select>
+                </div>
+            </div>
+
+            
+        </div>
+
+          <div class="columns  pl-3 pr-3 ">
+            <div class="column ">
+                <div class="select  is-rounded  is-fullwidth">
+                    <select name="type_user">
+                        <option>Software Dev</option>
+                        <option>Frontend Dev </option>
+                        <option>Backend Dev</option>
+                        <option>Fullstack Dev</option>
+                        <option>Mobile App Dev</option>
+                        <option>Bot Dev</option>
+                        <option>UI UX Desginer</option>
+                        <option>Game Dev</option>
+                        <option>Database Desginer</option>
+                        <option>Api Dev</option>
+                        
+            
+                    </select>
+                </div>
+            </div>
+
+            
+        </div>
+
+
+        <div class="columns is-centered  pl-3 pr-3 pt-3">
+            <div class="column ">
+        
+
+              <div>
+              <button class="button is-fullwidth is-rounded " style="background-color: #577CFF; color: white; border: none;  " ><div class="is-size-6" id="btn">Update </div></button>
+              </div>
+            
+            </div>
+        </div>
+
+
+
+
+
+        </div>
+
+        
+
+        
+        </div>
+
+
+
+
+
+   
+
+      
+      </section>
+    <!-- Any other Bulma elements you want -->
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <div style="color: white; font-size: 1.4rem; font-weight: semi bold; float: left; " ><span class="icon-text ">
+    <span class="icon mt-3">
+      <img src="{% static "images/folder.png" %}" >
+    </span>
+    <span class="column ">Users(25)</span>
+  </span>
+</div>
+  <br>  <br>
+
+
   <div class="columns is-flex-direction-row is-justify-content-space-between"> 
-    <div style="color:  #6c717e; font-size: 1rem; font-weight: semi bold; padding-top: 0.6rem; padding-left: 0.8rem;">Manage your user here</div>
+    <div style="color:  #6c717e; font-size: 1rem; font-weight: normal; padding-top: 0.6rem; margin-left: -9.8rem;">Manage your user here</div>
     
     
     <div class="buttons">
@@ -118,8 +457,8 @@
 
   <div class="columns box is-centered second-col"  style="background-color: #151B2D; height: 70vh; border-radius: 20px; overflow-x: scroll;" >
     <div class="column">
-      <table class="table  is-borderless " style="width: 95%; background-color:  #151B2D ;">
-        <thead class="has-text-white is-rounded">
+      <table class="table  is-borderless  " style="width: 95%; background-color:  #151B2D ;">
+        <thead class="has-text-white" style="border-radius: 10px;">
           <tr  class=" is-rounded" style="background-color: #080B15;">
             <th><abbr style="color: #6e82bc;" >Username</abbr></th>
             <th><abbr   style="color: #6e82bc;">ID</abbr></th>
@@ -133,42 +472,45 @@
           </tr>
         </thead>
     
-        <tbody class="tb"  >
-          <tr style="color: #6c717e; font-size: 1rem;">
+        <tbody class="tb "  style="font-size: 1rem;" >
+          <tr style="color: #6c717e; ">
           
-            <td  >Bereket Daniel </td>
-            <td class="">UGR/25430/12 </td>
-            <td class=" ">Third</td>
-            <td class=" ">CSE</td>
-            <td class=" ">Bot Developer</td>
-            <td class=" "  style="color: cornflowerblue"><a>Edit</a></td>
-            <td class=" " style="color: cornflowerblue"><a>Remove</a></td>
+            <td  style="font-size:0.9rem;">Bereket Daniel</td>
+            <td style="font-size:0.9rem;">UGR/25430/12 </td>
+            <td style="font-size:0.9rem;">Fifth</td>
+            <td style="font-size:0.9rem;">CSE</td>
+            <td style="font-size:0.9rem;">Bot Dev</td>
+            <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Edit</a></td>
+            <td style="font-size:0.9rem; color: cornflowerblue"><a>Remove</a></td>
             
       
           </tr>
           <tr style="color: #6c717e;">
           
-            <td  >Abel Adane </td>
-            <td class="">UGR/25430/12 </td>
-            <td class=" ">Third</td>
-            <td class=" ">SE</td>
-            <td class=" ">UI/UX Designer</td>
-            <td class=" " style="color: cornflowerblue">Edit</td>
-            <td class=" " style="color: cornflowerblue">Remove</td>
-            
+            <td  style="font-size:0.9rem;">Salem Mesfin</td>
+            <td style="font-size:0.9rem;">UGR/25430/12 </td>
+            <td style="font-size:0.9rem;">Third</td>
+            <td style="font-size:0.9rem;">SE</td>
+            <td style="font-size:0.9rem;">UI/UX Designer</td>
+            <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Edit</a></td>
+            <td style="font-size:0.9rem; color: cornflowerblue"><a>Remove</a></td>
+              
+          
       
           </tr>
     
           <tr style="color: #6c717e;">
           
-            <td  >Salem Mesfin </td>
-            <td class="">UGR/25430/12 </td>
-            <td class=" ">Third</td>
-            <td class=" ">CSE</td>
-            <td class=" ">FullStack</td>
-            <td class=" " style="color: cornflowerblue">Edit</td>
-            <td class=" " style="color: cornflowerblue">Remove</td>
-            
+        
+            <td  style="font-size:0.9rem;">Abel Adane </td>
+            <td style="font-size:0.9rem;">UGR/25430/12 </td>
+            <td style="font-size:0.9rem;">Fourth</td>
+            <td style="font-size:0.9rem;">CSE</td>
+            <td style="font-size:0.9rem;">Flutter Dev</td>
+            <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Edit</a></td>
+            <td style="font-size:0.9rem; color: cornflowerblue"><a>Remove</a></td>
+              
+         
       
           </tr>
          
@@ -190,13 +532,6 @@
 
 
 </center>
-<br>
 
-<div class="content has-text-centered is-size-7 " >
-  <p>
-    <strong>CSEC Dev</strong> Powered by <a>Bereket Daniel</a>. All right reserved 
-    <a href="http://opensource.org/licenses/mit-license.php">2023/2016</a><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a>.
-  </p>
-</div>
 
 {% endblock %}

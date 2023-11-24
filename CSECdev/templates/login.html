@@ -6,7 +6,49 @@
     <title>CSEC | Login</title>
  
     <style>
-        
+      @keyframes slideFromTop {
+  0% {
+    transform: translateY(-70%); /* Start position above the viewport */
+    opacity: 0; /* Hidden */
+  }
+  100% {
+    transform: translateY(0); /* End position at the top of the viewport */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+#card {
+  animation-name: slideFromTop;
+  animation-duration: 1.4s; /* Duration of animation */
+  animation-timing-function: ease-in-out; /* Smooth easing */
+  animation-fill-mode: forwards; /* Maintain end state after animation */
+
+
+  
+}
+
+
+
+@keyframes slideFromTopImg {
+  0% {
+    transform: translateY(70%); /* Start position above the viewport */
+    opacity: 0; /* Hidden */
+  }
+  100% {
+    transform: translateY(0); /* End position at the top of the viewport */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+#cardImg {
+  animation-name: slideFromTopImg;
+  animation-duration: 1.4s; /* Duration of animation */
+  animation-timing-function: ease-in-out; /* Smooth easing */
+  animation-fill-mode: forwards; /* Maintain end state after animation */
+
+
+  
+}
     
       img {  
           animation-name: floating;
@@ -34,16 +76,26 @@
 
           height: auto;
         }
+        #cardImg{
+          margin-top: 0 !important;
+        }
         #logTxt{
-    
+          margin-top: -10px !important;
         font-size: 2.3rem;
+        }
+        #card{
+          height: auto !important;
+          padding-bottom: 20px;
+        }
+        #subTxt{
+          margin-top: 0 !important;
         }
      
         img{
           padding-bottom: 10%;
         }
         #btn{
-          width: 100vw;
+          width: 100%;
         }
 
 }
@@ -57,7 +109,7 @@
         <div class="container is-responsive">
             <center>
             <div class="columns  ">
-                <div class="column is-three-fifths has-text-white is-size-1 mt-5" id="cont">
+                <div class="column is-three-fifths has-text-white is-size-1 mt-5" id="cardImg">
                   CSEC DEV
                   <div class="subtitle" style="color: #3e455f;">Management Website</div>
                   <div class="columns mt-4">
@@ -68,7 +120,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="column is-rounded is-two-fifths  box is-vcentered is-centered second-col"  style="background-color: #151B2D; height: 90vh; border-radius: 20px;" id="second-col">
+                <div class="column is-rounded is-two-fifths  box is-vcentered is-centered second-col"  id="card" style="background-color: #151B2D; height: 90vh; border-radius: 20px;" id="second-col">
                 
 
                  <!-- <div class="columns is-centered">
@@ -92,7 +144,7 @@
                   
                   <div class="column is-half" >
                
-                      <div class="is-size-7 has-text-centered mt-5 " style="color: rgb(133, 133, 133);" >
+                      <div id="subTxt" class="is-size-7 has-text-centered mt-5 " style="color: rgb(133, 133, 133);" >
                         Login to your account to countinue
                       </div>
                   </div>
@@ -105,7 +157,7 @@
                   <div class="column is-half">
                
                       <div class="subtitle">
-                        <input class="input is-rounded has-text-white" type="text" placeholder="Username" style="background-color: #151B2D; ">
+                        <input class="input is-rounded " type="text" placeholder="Username" style="background-colorgb(255, 255, 255)B2D; ">
                       </div>
                   </div>
 
@@ -128,7 +180,7 @@
                   <div class="column is-half">
                
                       <div>
-                        <input class="input is-rounded has-text-grey-light" type="password" placeholder="Password" style="background-color: #151B2D; color:#ffffff ">
+                        <input class="input is-rounded " type="password" placeholder="Password" style="background-color: #ffffff; color:#ffffff ">
                       </div>
                   </div>
 
@@ -151,11 +203,11 @@
 
 
                 <div class="columns is-centered">
-                  <div class="column ">
+                  <div class="column is-half ">
                
 
                     <div >
-                    <button class="button is-fullwidth is-rounded " style="background-color: #577CFF; color: white; border: none; width: 50%; " ><div class="is-size-7" id="btn">Login</div></button>
+                    <button class="button is-fullwidth is-rounded " style="background-color: #577CFF; color: white; border: none; " ><div class="is-size-7" id="btn">Login</div></button>
                     </div>
                    
                   </div>
@@ -181,9 +233,9 @@
             </center>
             <br>
             
-              <div class="content has-text-centered is-size-7 " style="margin-top: 10px;">
+              <div class="content has-text-centered is-size-7 " style="margin-top: 10px; color: #6c717e;">
                 <p>
-                  <strong>CSEC Dev</strong> Powered by <a href="https://jgthms.com">Bereket Daniel</a>. All right reserved 
+                  <span style="font-weight: bold;">CSEC Dev</span> Powered by <a href="https://jgthms.com">Bereket Daniel</a>. All right reserved 
                   <a href="http://opensource.org/licenses/mit-license.php">2023/2016</a><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a>.
                 </p>
               </div>
