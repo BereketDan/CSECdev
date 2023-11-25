@@ -2,7 +2,35 @@
 
 {% load static %}
 {% block content %}
-
+<style>
+::-webkit-scrollbar {
+    width: 12px;
+}
+                    
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+                    
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.img_feedback{  
+          animation-name: floating;
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
+          animation-timing-function: ease-in-out;
+          margin-left: 30px;
+          margin-top: 5px;
+      }
+      
+      @keyframes floating {
+          0% { transform: translate(0,  0px); }
+          50%  { transform: translate(0, 20px); }
+          100%   { transform: translate(0, -0px); }    
+      }
+</style>
 <center>
 <br>
     <div class="columns">
@@ -10,7 +38,7 @@
             <div class="columns mt-4">
               <div class="column">
           
-                  <img src="{% static "images/feedback.png" %}" style="width: 55%;">
+                  <img src="{% static "images/feedback.png" %}" style="width: 55%;" class="img_feedback">
                   
               </div>
             </div>
@@ -41,15 +69,42 @@
             
 
          <div class="columns">
-            <div class="column box is-three-quarters" style="background-color:#151B2D ; height: 18vh; border-left: #6d88e8 solid 15px;">
-
+            <div class="column box is-three-quarters" style="background-color:#151B2D ; height: 18vh auto; border-left: #6d88e8 solid 15px;">
+              <div class="columns">
+                <div class="column is-one-third pt-5">
+                  <img src="{% static "images/Message.png" %}" style="width: 75%;">
+                  
+                </div>
+                <div class="column">
+                  <div class='rows'>
+                    <div class='row is-full   has-text-white  is-size-6 pb-2' > @username </div>
+                    <div class='row is-full' style="color: #5e5e5e;"> I really liked that you made the effort to keep every team member up to date on your tasks.  </div>
+                    <div class='row is-full is-size-7' style="float: right; color: #6d88e8;text-align: right;padding-right: 12px;"> 11/25/2023 </div>
+                  </div>
+                </div>
+            
+              </div>
+             
             </div>
        </div>
         <br>
 
           <div class="columns">
-            <div class="column box is-three-quarters" style="background-color:#151B2D ; height: 18vh;border-left: #6d88e8 solid 15px;">
-
+            <div class="column box is-three-quarters" style="background-color:#151B2D ; height: 18vh auto; border-left: #6d88e8 solid 15px;">
+              <div class="columns">
+                <div class="column is-one-third pt-5">
+                  <img src="{% static "images/Message.png" %}" style="width: 75%;">
+                  
+                </div>
+                <div class="column">
+                  <div class='rows'>
+                    <div class='row is-full   has-text-white  is-size-6 pb-2' > @username </div>
+                    <div class='row is-full' style="color: #5e5e5e;"> I really liked that you made the effort to keep every team member up to date on your tasks.  </div>
+                    <div class='row is-full is-size-7' style="float: right; color: #6d88e8;text-align: right;padding-right: 12px;"> 11/25/2023 </div>
+                  </div>
+                </div>
+            
+              </div>
             </div>
           </div>
           <br>
@@ -57,8 +112,21 @@
 
          
           <div class="columns">
-            <div class="column box is-three-quarters" style="background-color:#151B2D ; height: 18vh;border-left: #6d88e8 solid 15px;">
-
+            <div class="column box is-three-quarters" style="background-color:#151B2D ; height: 18vh auto;border-left: #6d88e8 solid 15px;">
+              <div class="columns">
+                <div class="column is-one-third pt-5">
+                  <img src="{% static "images/Message.png" %}" style="width: 75%;">
+                  
+                </div>
+                <div class="column">
+                  <div class='rows'>
+                    <div class='row is-full   has-text-white  is-size-6 pb-2' > @username </div>
+                    <div class='row is-full' style="color: #5e5e5e;"> I really liked that you made the effort to keep every team member up to date on your tasks.  </div>
+                    <div class='row is-full is-size-7' style="float: right; color: #6d88e8;text-align: right;padding-right: 12px;"> 11/25/2023 </div>
+                  </div>
+                </div>
+            
+              </div>
             </div>
           </div>
 

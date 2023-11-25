@@ -9,8 +9,21 @@
        {% load static %}
    
      <link rel="stylesheet" href="{% static "css/bulma/css/bulma.css" %}">
+     <link rel="icon" href="{% static "images/lap.png" %}" " type="image/gif" sizes="16x16" >
      <style>
-
+::-webkit-scrollbar {
+    width: 12px;
+}
+                    
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+                    
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
 @keyframes slideFromTop {
   0% {
     opacity: 0; /* Start with 0 opacity (hidden) */
@@ -19,7 +32,11 @@
     opacity: 1; /* End with full opacity (visible) */
   }
 }
-
+.rows{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
 #card {
   animation-name: slideFromTop;
   animation-duration: 1.5s; /* Duration of animation */
