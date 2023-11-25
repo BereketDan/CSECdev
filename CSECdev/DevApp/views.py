@@ -20,3 +20,5 @@ def member(request):
 def feedback(request):
     return render(request, "feedback.html")
 
+def event(request):
+    return render(request, "event.html")
