@@ -83,8 +83,8 @@
     }
        .navbar-item a:hover{
     background-color:#151B2D!important;
-    text-decoration:underline;
-    transition: 0.6s;
+    border-bottom: #5579c6 2px solid;
+    /* transition: 0.3s; */
     color:rgb(66, 132, 255);
    
 }
@@ -190,27 +190,27 @@ $navbarBurgers.forEach( el => {
   
             <div class="navbar-end">
               <div class="navbar-item" style="padding-right: 1.5vw;">
-                <a  href="{% url "member" %}" class="navbar-item" style="color:cornflowerblue">
+                <a id="member-nav" href="{% url "member" %}" class="navbar-item" style="color:#586078">
                   Member
                 </a>
           
-                <a href="{% url "event" %}" class="navbar-item" style="color:#586078" >
+                <a id="event-nav" href="{% url "event" %}" class="navbar-item" style="color:#586078" >
                  Event
                 </a>
 
                 
-                <a href="{% url "feedback" %}" class="navbar-item" style="color:#586078" >
+                <a id="feedback-nav" href="{% url "feedback" %}" class="navbar-item" style="color:#586078" >
                   Feedback 
                 </a>
 
                 
-                <a class="navbar-item" style="color:#586078" >
+                <a id="dashboard-nav" class="navbar-item" style="color:#586078" >
                   
                   Dashboard
                 </a>
     
     
-                <a class="navbar-item" style="color:#586078; padding-right: 1.5vw">
+                <a id="setting-nav" class="navbar-item" style="color:#586078; padding-right: 1.5vw">
                   Setting
                 </a>
           
