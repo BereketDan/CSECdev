@@ -11,6 +11,7 @@
      <link rel="stylesheet" href="{% static "css/bulma/css/bulma.css" %}">
      <link rel="icon" href="{% static "images/lap.png" %}" " type="image/gif" sizes="16x16" >
      <style>
+
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -204,7 +205,7 @@ $navbarBurgers.forEach( el => {
                 </a>
 
                 
-                <a id="dashboard-nav" class="navbar-item" style="color:#586078" >
+                <a id="dashboard-nav"  href="{% url "dashboard" %}" class="navbar-item" style="color:#586078" >
                   
                   Dashboard
                 </a>

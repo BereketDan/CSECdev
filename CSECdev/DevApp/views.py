@@ -21,3 +21,7 @@ def feedback(request):
 
 def event(request):
     return render(request, "event.html")
+
+
+def dashboard(request):
+    return render(request, "dashboard.html")
