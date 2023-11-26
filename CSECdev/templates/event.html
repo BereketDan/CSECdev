@@ -4,8 +4,120 @@
 {% block content %}
 
 <center>
+    <div style="color: white; font-size: 1.4rem; font-weight: semi bold; float: left; " ><span class="icon-text ">
+        <span class="icon mt-3">
+          <img src="{% static "images/event.png" %}" >
+        </span>
+        <span class="column ">Event</span>
+      </span>
+    </div>
+      <br>  <br>
+    
+    
+      <div class="columns is-flex-direction-row is-justify-content-space-between"> 
+        <div style="color:  #6c717e; font-size: 1rem; font-weight: normal; padding-top: 0.6rem; margin-left: -7.4rem;">Manage your event here</div>
+        
+        
+        <div class="button is-rounded " style="background-color: #080B15; border: white 2px solid; color: white;" >
+         
+            <span class="icon mt-0">
+                <img src="{% static "images/telegram.png" %}" width="80%">
+              </span>
+              <span class="column ">Post</span>
+            </span>
+         
+        
+        </div>
+      </div>
+<br>
+    <div class="columns">
+        <div class="column pt-6">
+            <div class="column is-four-fifths"><input name="new_pass" class="input is-rounded is-fullwidth" type="text" placeholder="Username"></div>
+            
+            <div class="column is-four-fifths"><input name="new_pass" class="input is-rounded is-fullwidth  pb-2" type="text" placeholder="ID"></div>
 
-<div class="title">This page is Event Handler</div>
+            <div class="column is-four-fifths"><input name="new_pass" class="input is-rounded is-fullwidth  pb-2" type="text" placeholder="ID"></div>
+            
+            <div class="column is-four-fifths"><input name="new_pass" class="input is-rounded is-fullwidth  pb-2" type="text" placeholder="ID"></div>
+            <br>
+            <div class="column is-four-fifths"> <button class="button is-fullwidth is-rounded " style="background-color: #577CFF; color: white; border: none;  " ><div class="is-size-7" id="btn">save</div></button> </div>
+            <div class="column is-four-fifths"> <button class="button is-fullwidth is-rounded " style="background-color: #080B15; border: white 2px solid; color: white; " ><div class="is-size-7" id="btn">clear</div></button> </div>
+             
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="column is-three-quarters"  style="background-color: #151B2D; height: 70vh; border-radius: 20px; border-left: #6d88e8 solid 15px; overflow-x: scroll;">
+            <table class="table  is-borderless  " style="width: 95%; background-color:  #151B2D ;">
+                <thead class="has-text-white" style="border-radius: 10px;">
+                  <tr  class=" is-rounded" style="background-color: #080B15;">
+                    <th><abbr style="color: #6e82bc;" >Event Name</abbr></th>
+                    <th><abbr   style="color: #6e82bc;">Location</abbr></th>
+                    <th><abbr   style="color: #6e82bc;">Hour</abbr></th>
+                    <th><abbr   style="color: #6e82bc;">Date</abbr></th>
+                    <th><abbr   style="color: #6e82bc;"></abbr></th>
+                    <th><abbr   style="color: #6e82bc;" ></abbr></th>
+ 
+                    
+            
+                  </tr>
+                </thead>
+            
+                <tbody class="tb "  style="font-size: 1rem;" >
+                  <tr style="color: #6c717e; ">
+                  
+                    <td  style="font-size:0.9rem;">Bereket Daniel</td>
+                    <td style="font-size:0.9rem;">UGR/25430/12 </td>
+                    <td style="font-size:0.9rem;">Fifth</td>
+                    <td style="font-size:0.9rem;">CSE</td>
+
+                    <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Edit</a></td>
+                    <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Remove</a></td>
+                    
+              
+                  </tr>
+                  <tr style="color: #6c717e;">
+                  
+                    <td  style="font-size:0.9rem;">Salem Mesfin</td>
+                    <td style="font-size:0.9rem;">UGR/25430/12 </td>
+                    <td style="font-size:0.9rem;">Third</td>
+                    <td style="font-size:0.9rem;">SE</td>
+   
+                    <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Edit</a></td>
+                    <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Remove</a></td>
+                      
+                  
+              
+                  </tr>
+            
+                  <tr style="color: #6c717e;">
+                  
+                
+                    <td  style="font-size:0.9rem;">Abel Adane </td>
+                    <td style="font-size:0.9rem;">UGR/25430/12 </td>
+                    <td style="font-size:0.9rem;">Fourth</td>
+                    <td style="font-size:0.9rem;">CSE</td>
+          
+                    <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Edit</a></td>
+                    <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Remove</a></td>
+                      
+                 
+              
+                  </tr>
+                 
+               
+            
+                </tbody>
+              </table>
+        </div>
+    
+      </div>
 
 </center>
 
