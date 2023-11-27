@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import *
 
@@ -14,22 +14,24 @@ def login(request):
         temp_store.append(_.userName + _.password)
     if request.method == 'POST':
         name = request.POST.get('user_name')
-        print(name)
         passs = request.POST.get('user_password')
-
+        request.session['name'] = name
+        if name and passs is None:
+            print("none")
         
         if name+passs in temp_store:
             return  member(request)
         else:
-            print("run")    
+            return redirect('login')   
 
             
-          
-
 
 
     return render(request, "login.html")
 
+def logout(request):
+    request.session.flush()
+    return redirect('login')
 
 
 def base(request):
@@ -37,17 +39,39 @@ def base(request):
 
 
 def member(request):
-    return render(request, "member.html")
-
+    name = request.session.get('name')
+    if name:
+        return render(request, "member.html")
+    else:
+        return redirect('login') 
 def feedback(request):
-    return render(request, "feedback.html")
+    name = request.session.get('name')
+    if name:
+        return render(request, "feedback.html")
+    else:
+        return redirect('login')
 
 def event(request):
-    return render(request, "event.html")
+    name = request.session.get('name')
+    if name:
+        return render(request, "event.html")
+    else:
+        return redirect('login')
+
 
 
 def dashboard(request):
-    return render(request, "dashboard.html")
+    name = request.session.get('name')
+    if name:
+        return render(request, "dashboard.html")
+    else:
+        return redirect('login')
+
 
 def settings(request):
-    return render(request, "settings.html")
+    name = request.session.get('name')
+    if name:
+        return render(request, "settings.html")
+    else:
+        return redirect('login')
+    

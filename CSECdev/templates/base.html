@@ -216,7 +216,9 @@ $navbarBurgers.forEach( el => {
                 </a>
           
                 <div class="buttons" >
-                  <a class="button"  style="border-radius: 60px; background-color:cornflowerblue;  color: rgb(255, 255, 255); border:none;">
+                  <form method="POST" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                  <button class="button" type="submit"  style="border-radius: 60px; background-color:cornflowerblue;  color: rgb(255, 255, 255); border:none;">
                     <strong style="font-size: 0.7rem; font-weight:normal;  padding-right: 5px;  padding-left: 5px;">  <div style="color: white; font-size: 1.4rem; font-weight: semi bold; float: left; " ><span class="icon-text is-small">
 
                       <span class="icon is-small">
@@ -225,8 +227,8 @@ $navbarBurgers.forEach( el => {
                      
                     </span>
                   </div></strong>
-                  </a>
-                
+                  </button>
+                </form>
                 </div>
               </div>
             </div>

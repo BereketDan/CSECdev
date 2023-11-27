@@ -12,4 +12,5 @@ urlpatterns = [
     path('event/', views.event, name = 'event'),
     path('dashboard/', views.dashboard, name = "dashboard"),
     path('settings/', views.settings, name = "settings"),
+    path('logout/', views.logout, name = "logout"),
 ]
