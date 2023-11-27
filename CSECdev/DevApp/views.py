@@ -45,6 +45,13 @@ def deleteMember(request,id):
     return redirect('member')
 
 
+
+def deleteEvent(request,id):
+    memberList = Event.objects.get(id=id)
+    memberList.delete()
+    return redirect('event')
+
+
 def updateMember(request,id):
     memberListU = Member.objects.get(id=id)
     template = loader.get_template('edituser.html')

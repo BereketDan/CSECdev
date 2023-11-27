@@ -439,10 +439,11 @@
                   <tr  class=" is-rounded" style="background-color: #080B15;">
                     <th><abbr style="color: #6e82bc;" >Event Name</abbr></th>
                     <th><abbr   style="color: #6e82bc;">Location</abbr></th>
+                    <th><abbr   style="color: #6e82bc;"></abbr></th>
                     <th><abbr   style="color: #6e82bc;">Hour</abbr></th>
                     <th><abbr   style="color: #6e82bc;">Date</abbr></th>
                     <th><abbr   style="color: #6e82bc;"></abbr></th>
-                    <th><abbr   style="color: #6e82bc;" ></abbr></th>
+          
  
                     
             
@@ -457,9 +458,8 @@
                     <td style="font-size:0.9rem;">{{eventLists.location}}<td>
                     <td style="font-size:0.9rem;">{{eventLists.hour}}</td>
                     <td style="font-size:0.9rem;">{{eventLists.date}}</td>
-
-                    <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Edit</a></td>
-                    <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Remove</a></td>
+                    
+                    <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal"  href="deleteEvent/{{eventLists.id}}">Remove</a></td>
                     
               
                   </tr>
