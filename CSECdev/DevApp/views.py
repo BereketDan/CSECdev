@@ -10,19 +10,25 @@ def login(request):
     mydata = User_auth.objects.all()
     temp_store = []
     for _ in mydata:
-        print(_.userName + _.password)
         temp_store.append(_.userName + _.password)
     if request.method == 'POST':
         name = request.POST.get('user_name')
         passs = request.POST.get('user_password')
-        request.session['name'] = name
-        if name and passs is None:
-            print("none")
+        
+        
         
         if name+passs in temp_store:
+            request.session['name'] = name
+            if request.session.modified:
+                # Valid credentials, perform login action (e.g., set session, redirect to dashboard)
+                request.session['name'] = name
+                return redirect('member')
+            
             return  member(request)
         else:
-            return redirect('login')   
+  
+            error_message = 'Invalid username or password.'
+            return render(request, 'login.html', {'error_message': error_message})  
 
             
 
