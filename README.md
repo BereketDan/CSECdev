@@ -60,18 +60,18 @@ The CSEC Dev Web Management System is a robust platform designed to effectively 
 > Login Page INFO
 
 
-💻 Username: admin
-
-🔑 Password:  admin
+      💻 Username: admin
+      
+      🔑 Password:  admin
 
 
 
 > Django Admin INFO
 
 
-💻 Username : admin
-
-🔑 Password: onyx123
+        💻 Username : admin
+        
+        🔑 Password: onyx123
 
 
 
