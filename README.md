@@ -105,7 +105,7 @@ Members Page
 
 Adding new member page
 
-![image](https://github.com/BereketDan/CSECdev/assets/86808497/8440cfe5-ba33-4ced-b3cb-d3942bc433a7)
+![image](https://github.com/BereketDan/CSECdev/assets/86808497/85103c0f-a681-41e1-a827-809945ba8a22)
 
 
 
