@@ -450,49 +450,20 @@
                 </thead>
             
                 <tbody class="tb "  style="font-size: 1rem;" >
+                  {% for eventLists in eventList %}
                   <tr style="color: #6c717e; ">
                   
-                    <td  style="font-size:0.9rem;">Bereket Daniel</td>
-                    <td style="font-size:0.9rem;">UGR/25430/12 </td>
-                    <td style="font-size:0.9rem;">Fifth</td>
-                    <td style="font-size:0.9rem;">CSE</td>
+                    <td  style="font-size:0.9rem;">{{eventLists.eventName}}</td>
+                    <td style="font-size:0.9rem;">{{eventLists.location}}<td>
+                    <td style="font-size:0.9rem;">{{eventLists.hour}}</td>
+                    <td style="font-size:0.9rem;">{{eventLists.date}}</td>
 
                     <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Edit</a></td>
                     <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Remove</a></td>
                     
               
                   </tr>
-                  <tr style="color: #6c717e;">
-                  
-                    <td  style="font-size:0.9rem;">Salem Mesfin</td>
-                    <td style="font-size:0.9rem;">UGR/25430/12 </td>
-                    <td style="font-size:0.9rem;">Third</td>
-                    <td style="font-size:0.9rem;">SE</td>
-   
-                    <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Edit</a></td>
-                    <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Remove</a></td>
-                      
-                  
-              
-                  </tr>
-            
-                  <tr style="color: #6c717e;">
-                  
-                
-                    <td  style="font-size:0.9rem;">Abel Adane </td>
-                    <td style="font-size:0.9rem;">UGR/25430/12 </td>
-                    <td style="font-size:0.9rem;">Fourth</td>
-                    <td style="font-size:0.9rem;">CSE</td>
-          
-                    <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Edit</a></td>
-                    <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Remove</a></td>
-                      
-                 
-              
-                  </tr>
-                 
-               
-            
+                  {% endfor %}
                 </tbody>
               </table>
         </div>

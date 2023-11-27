@@ -136,6 +136,8 @@ def feedback(request):
         return redirect('login')
 
 def event(request):
+    eventList = Event.objects.all() 
+    
     name = request.session.get('name')
     if name:
         if request.method == 'POST':
@@ -149,7 +151,8 @@ def event(request):
             addEvent= Event(eventName=eventName, location=location,hour=hour, date = date )
             addEvent.save()
 
-        return render(request, "event.html")
+        return render(request, "event.html" ,{'eventList': eventList})
+
     else:
         return redirect('login')
 
