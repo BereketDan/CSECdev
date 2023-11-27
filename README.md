@@ -81,6 +81,10 @@ The CSEC Dev Web Management System is a robust platform designed to effectively 
 
 
 
+## Desgining Process : using Figma
+
+![image](https://github.com/BereketDan/CSECdev/assets/86808497/8dc612b8-f3ff-48d4-9115-8abd1fdc54f3)
+
 
 
 ## Telegram Bot(to recive feedback from user and dispay on web)
@@ -142,8 +146,4 @@ The CSEC Dev Web Management System is a robust platform designed to effectively 
 
 ![image](https://github.com/BereketDan/CSECdev/assets/86808497/a5618cde-5b80-473b-9bad-ab10b8c86c0d)
 
-
-## Desgin Process : using Figma
-
-![image](https://github.com/BereketDan/CSECdev/assets/86808497/8dc612b8-f3ff-48d4-9115-8abd1fdc54f3)
 
