@@ -51,6 +51,7 @@ The CSEC Dev Web Management System is a robust platform designed to effectively 
 * **Cleint Side** : HTML5 , CSS3 and Javasciript
 * **Server Side** : Django(Python)
 + **CSS Framework** : BULMA Framework
++ **Bot Development** : Telesun(Javascript Library) and telebot(Python Library)
 + **Version Control** : Git
 
 
