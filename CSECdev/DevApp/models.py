@@ -24,7 +24,7 @@ class Event(models.Model):
   hour = models.CharField(max_length=255)
   date = models.CharField(max_length=255)
   def __str__(self):
-        return self.eventname
+        return self.eventName
 
 
 class Feedback(models.Model):
