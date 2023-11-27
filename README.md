@@ -130,6 +130,13 @@ accepting feedback from telegram bot and display on web
 ![image](https://github.com/BereketDan/CSECdev/assets/86808497/64cf5bea-80d9-47b6-b883-4b9fcb4d6a1d)
 
 
+
+In Mobile View (Feedback)
+
+
+![image](https://github.com/BereketDan/CSECdev/assets/86808497/b99db4ac-cfeb-415f-a5eb-ae319e0f794d)
+
+
 Analyzing and reporting Page
 
 
