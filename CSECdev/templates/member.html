@@ -145,20 +145,34 @@ document.addEventListener('DOMContentLoaded', () => {
       
         </div>
 
+        <form method="POST" action="{% url 'member' %}">
+          {% csrf_token %}
+
 
         <div class="columns is-centered">
                   
           <div class="column is-three-fifths" >
 
-            <div class="column"><input name="new_pass" class="input is-rounded is-fullwidth" type="text" placeholder="Username"></div>
+            <div class="column"><input name="userName" class="input is-rounded is-fullwidth" type="text" placeholder="Username"></div>
             
-            <div class="column"><input name="new_pass" class="input is-rounded is-fullwidth  pb-2" type="text" placeholder="ID"></div>
-
-             
+            <div class="column"><input name="userId" class="input is-rounded is-fullwidth  pb-2" type="text" placeholder="ID"></div>
             <div class="columns  pl-3 pr-3 pt-2">
               <div class="column ">
                   <div class="select  is-rounded  is-fullwidth">
-                      <select name="type_user">
+                      <select name="user_sex">
+                          <option>Male</option>
+                          <option>Female</option>
+                      
+                      </select>
+                  </div>
+              </div>
+              
+          </div>
+             
+            <div class="columns  pl-3 pr-3 ">
+              <div class="column ">
+                  <div class="select  is-rounded  is-fullwidth">
+                      <select name="depart">
                           <option>Mechanical </option>
                           <option>Material</option>
                           <option>Chemical</option>
@@ -177,29 +191,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
               
           </div>
+          
           <div class="columns  pl-3 pr-3 ">
             <div class="column ">
                 <div class="select  is-rounded  is-fullwidth">
-                    <select name="type_user">
+                    <select name="year">
                         <option>Fisrt</option>
                         <option>Second </option>
                         <option>Third</option>
                         <option>Fourth</option>
                         <option>Fifth</option>
-                     
-                        
-            
+                    
                     </select>
                 </div>
             </div>
-
             
         </div>
 
           <div class="columns  pl-3 pr-3 ">
             <div class="column ">
                 <div class="select  is-rounded  is-fullwidth">
-                    <select name="type_user">
+                    <select name="skill">
                         <option>Software Dev</option>
                         <option>Frontend Dev </option>
                         <option>Backend Dev</option>
@@ -225,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
 
               <div>
-              <button class="button is-fullwidth is-rounded " style="background-color: #577CFF; color: white; border: none;  " ><div class="is-size-6" id="btn">Add </div></button>
+              <button type="submit" class="button is-fullwidth is-rounded " style="background-color: #577CFF; color: white; border: none;  " ><div class="is-size-6" id="btn">Add </div></button>
               </div>
             
             </div>
@@ -241,6 +253,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         
         </div>
+        
+      </form>
 
 
 
@@ -311,105 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
       
         </div>
-
-
-        <div class="columns is-centered">
-                  
-          <div class="column is-three-fifths" >
-
-            <div class="column"><input name="new_pass" class="input is-rounded is-fullwidth" type="text" placeholder="Username"></div>
-            
-            <div class="column"><input name="new_pass" class="input is-rounded is-fullwidth  pb-2" type="text" placeholder="ID"></div>
-
-             
-            <div class="columns  pl-3 pr-3 pt-2">
-              <div class="column ">
-                  <div class="select  is-rounded  is-fullwidth ">
-                      <select name="type_user" >
-                          <option class="has-text-info">Mechanical </option>
-                          <option>Material</option>
-                          <option>Chemical</option>
-                          <option>Communication</option>
-                          <option>Power</option>
-                          <option>Software</option>
-                          <option>Computer Science </option>
-                          <option>Civil</option>
-                          <option>Architecture</option>
-                          <option>Water</option>
-                          <option>Applide</option>
-              
-                      </select>
-                  </div>
-              </div>
-
-              
-          </div>
-          <div class="columns  pl-3 pr-3 ">
-            <div class="column ">
-                <div class="select  is-rounded  is-fullwidth">
-                    <select name="type_user">
-                        <option>Fisrt</option>
-                        <option>Second </option>
-                        <option>Third</option>
-                        <option>Fourth</option>
-                        <option>Fifth</option>
-                     
-                        
-            
-                    </select>
-                </div>
-            </div>
-
-            
-        </div>
-
-          <div class="columns  pl-3 pr-3 ">
-            <div class="column ">
-                <div class="select  is-rounded  is-fullwidth">
-                    <select name="type_user">
-                        <option>Software Dev</option>
-                        <option>Frontend Dev </option>
-                        <option>Backend Dev</option>
-                        <option>Fullstack Dev</option>
-                        <option>Mobile App Dev</option>
-                        <option>Bot Dev</option>
-                        <option>UI UX Desginer</option>
-                        <option>Game Dev</option>
-                        <option>Database Desginer</option>
-                        <option>Api Dev</option>
-                        
-            
-                    </select>
-                </div>
-            </div>
-
-            
-        </div>
-
-
-        <div class="columns is-centered  pl-3 pr-3 pt-3">
-            <div class="column ">
-        
-
-              <div>
-              <button class="button is-fullwidth is-rounded " style="background-color: #577CFF; color: white; border: none;  " ><div class="is-size-6" id="btn">Update </div></button>
-              </div>
-            
-            </div>
-        </div>
-
-
-
-
-
-        </div>
-
-        
-
-        
-        </div>
-
-
+       
 
 
 
@@ -457,8 +373,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
   <div class="columns box is-centered second-col"  style="background-color: #151B2D; height: 70vh; border-radius: 20px; border-left: #6d88e8 solid 15px; overflow-x: scroll;" >
     <div class="column">
       <table class="table  is-borderless  " style="width: 95%; background-color:  #151B2D ;">
@@ -467,6 +381,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <th><abbr style="color: #6e82bc;" >Username</abbr></th>
             <th><abbr   style="color: #6e82bc;">ID</abbr></th>
             <th><abbr   style="color: #6e82bc;">Year</abbr></th>
+            <th><abbr   style="color: #6e82bc;">Sex</abbr></th>
             <th><abbr   style="color: #6e82bc;">Department</abbr></th>
             <th><abbr   style="color: #6e82bc;">Skill</abbr></th>
             <th><abbr   style="color: #6e82bc;" ></abbr></th>
@@ -477,46 +392,26 @@ document.addEventListener('DOMContentLoaded', () => {
         </thead>
     
         <tbody class="tb "  style="font-size: 1rem;" >
+          {% for memberLists in memberList %}
           <tr style="color: #6c717e; ">
-          
-            <td  style="font-size:0.9rem;">Bereket Daniel</td>
-            <td style="font-size:0.9rem;">UGR/25430/12 </td>
-            <td style="font-size:0.9rem;">Fifth</td>
-            <td style="font-size:0.9rem;">CSE</td>
-            <td style="font-size:0.9rem;">Bot Dev</td>
-            <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Edit</a></td>
-            <td style="font-size:0.9rem; color: cornflowerblue"><a>Remove</a></td>
+           
+
+ 
+ 
+            <td  style="font-size:0.9rem;">{{ memberLists.fisrtname }} </td>
+            <td style="font-size:0.9rem;">{{ memberLists.ugr }} </td>
+            <td style="font-size:0.9rem;">{{ memberLists.year }} </td>
+            <td style="font-size:0.9rem;">{{ memberLists.sex}} </td>
+            <td style="font-size:0.9rem;">{{ memberLists.department }} </td>
+            <td style="font-size:0.9rem;">{{ memberLists.skill }} </td>
+            <td style="font-size:0.9rem; color: cornflowerblue"><a href="updateMember/{{memberLists.id}}" data-target="modal-js"  class="js-modal">Edit</a></td>
+            <td style="font-size:0.9rem; color: cornflowerblue"><a href="deleteMember/{{memberLists.id}}">Remove</a></td>
             
       
           </tr>
-          <tr style="color: #6c717e;">
-          
-            <td  style="font-size:0.9rem;">Salem Mesfin</td>
-            <td style="font-size:0.9rem;">UGR/25430/12 </td>
-            <td style="font-size:0.9rem;">Third</td>
-            <td style="font-size:0.9rem;">SE</td>
-            <td style="font-size:0.9rem;">UI/UX Designer</td>
-            <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Edit</a></td>
-            <td style="font-size:0.9rem; color: cornflowerblue"><a>Remove</a></td>
-              
-          
-      
-          </tr>
-    
-          <tr style="color: #6c717e;">
-          
-        
-            <td  style="font-size:0.9rem;">Abel Adane </td>
-            <td style="font-size:0.9rem;">UGR/25430/12 </td>
-            <td style="font-size:0.9rem;">Fourth</td>
-            <td style="font-size:0.9rem;">CSE</td>
-            <td style="font-size:0.9rem;">Flutter Dev</td>
-            <td style="font-size:0.9rem; color: cornflowerblue"><a  data-target="modal-js"  class="js-modal">Edit</a></td>
-            <td style="font-size:0.9rem; color: cornflowerblue"><a>Remove</a></td>
-              
+          {% endfor %}
          
-      
-          </tr>
+    
          
        
     

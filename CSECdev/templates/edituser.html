@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<form action="updateMemberRecord/{{ memberListU.id }}" method="post">
+
+    <div class="columns  ">
+                  
+        <div class="column is-three-fifths is-left" >
+<!--        
+            <div class="column has-text-white has-text-weight-normal is-size-5  has-text-left" id="logTxt" >
+             Add User
+            </div> -->
+
+            <span class="icon-text ">
+              <span class="icon mt-3">
+                <img src="{% static "images/folder.png" %}" >
+              </span>
+              <span class="column has-text-white has-text-weight-normal is-size-4  has-text-left">Update Users</span>
+            </span>
+
+           
+        </div>
+    
+      </div>
+    <div class="columns is-centered is-half" style="height:80vh;">
+              
+      <div class="column is-half" >
+        {% csrf_token %}
+        <div class="column"><input name="new_pass" class="input is-rounded is-fullwidth" type="text" placeholder="Username" value="{{memberListU.fisrtname}}"></div>
+        
+        <div class="column"><input name="new_pass" class="input is-rounded is-fullwidth  pb-2" type="text" placeholder="ID"  value="{{memberListU.ugr}}"></div>
+
+        <div class="columns  pl-3 pr-3 pt-2">
+            <div class="column ">
+                <div class="select  is-rounded  is-fullwidth">
+                    <select name="user_sex" value="{{memberListU.sex}}">
+                        <option>Male</option>
+                        <option>Female</option>
+                    
+                    </select>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="columns  pl-3 pr-3 pt-2">
+          <div class="column ">
+              <div class="select  is-rounded  is-fullwidth ">
+                  <select name="type_user"  value="{{memberListU.department}}" >
+                      <option class="has-text-info">Mechanical </option>
+                      <option>Material</option>
+                      <option>Chemical</option>
+                      <option>Communication</option>
+                      <option>Power</option>
+                      <option>Software</option>
+                      <option>Computer Science </option>
+                      <option>Civil</option>
+                      <option>Architecture</option>
+                      <option>Water</option>
+                      <option>Applide</option>
+          
+                  </select>
+              </div>
+          </div>
+
+          
+      </div>
+      <div class="columns  pl-3 pr-3 ">
+        <div class="column ">
+            <div class="select  is-rounded  is-fullwidth">
+                <select name="type_user" value="{{memberListU.year}}">
+                    <option>Fisrt</option>
+                    <option>Second </option>
+                    <option>Third</option>
+                    <option>Fourth</option>
+                    <option>Fifth</option>
+                 
+                    
+        
+                </select>
+            </div>
+        </div>
+
+        
+    </div>
+
+      <div class="columns  pl-3 pr-3 ">
+        <div class="column ">
+            <div class="select  is-rounded  is-fullwidth">
+                <select name="type_user" value="{{memberListU.skill}}">
+                    <option>Software Dev</option>
+                    <option>Frontend Dev </option>
+                    <option>Backend Dev</option>
+                    <option>Fullstack Dev</option>
+                    <option>Mobile App Dev</option>
+                    <option>Bot Dev</option>
+                    <option>UI UX Desginer</option>
+                    <option>Game Dev</option>
+                    <option>Database Desginer</option>
+                    <option>Api Dev</option>
+                    
+        
+                </select>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+    <div class="columns is-centered  pl-3 pr-3 pt-3">
+        <div class="column ">
+    
+
+          <div>
+          <button class="button is-fullwidth is-rounded " style="background-color: #577CFF; color: white; border: none;  " ><div class="is-size-6" id="btn">Update </div></button>
+          </div>
+        
+        </div>
+    </div>
+
+
+
+
+
+    </div>
+
+    
+
+    
+    </div>
+
+  </form>
+{% endblock %}
