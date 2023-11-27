@@ -11,4 +11,5 @@ urlpatterns = [
     path('feedback/', views.feedback, name = 'feedback'),
     path('event/', views.event, name = 'event'),
     path('dashboard/', views.dashboard, name = "dashboard"),
+    path('settings/', views.settings, name = "settings"),
 ]
