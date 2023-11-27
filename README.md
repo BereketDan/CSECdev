@@ -83,67 +83,67 @@ The CSEC Dev Web Management System is a robust platform designed to effectively 
 
 
 
-Servant Telegram Bot(to recive feedback from user and dispay on web)
+## Telegram Bot(to recive feedback from user and dispay on web)
 
 ![Alt text](image-1.png)
 
-Implementaion
+## Implementaion
 
 ![Alt text](image-2.png)
 
 
 
-Login Page
+## Login Page 🔑
 
 ![image](https://github.com/BereketDan/CSECdev/assets/86808497/34f7627a-a622-44a1-9ef7-422ddef193a8)
 
-Login in Mobile View
+## Login in Mobile View 📱
 
 ![image](https://github.com/BereketDan/CSECdev/assets/86808497/46c2edae-7d08-4570-8170-f2c41aff968c)
 
 
-Members Page
+## Members Page 🧑‍🤝‍🧑
 
 ![image](https://github.com/BereketDan/CSECdev/assets/86808497/74a8663f-f154-4bcb-b378-6fc089a1d0db)
 
 
-Adding new member page
+## Adding new member page
 
 ![image](https://github.com/BereketDan/CSECdev/assets/86808497/85103c0f-a681-41e1-a827-809945ba8a22)
 
 
 
-Event Handling Page
+## Event Handling Page
 
 ![image](https://github.com/BereketDan/CSECdev/assets/86808497/5493e1e2-5374-4cb2-a7fe-a3547c79b07e)
 
 
 
-Posting text from web to telegram
+## Posting text from web to telegram
 
 ![image](https://github.com/BereketDan/CSECdev/assets/86808497/74be7173-5927-4fb3-9a11-b5528f24ae5a)
 
 
 
-accepting feedback from telegram bot and display on web
+## accepting feedback from telegram bot and display on web
 
 ![image](https://github.com/BereketDan/CSECdev/assets/86808497/64cf5bea-80d9-47b6-b883-4b9fcb4d6a1d)
 
 
 
-In Mobile View (Feedback)
+## In Mobile View (Feedback)
 
 
 ![image](https://github.com/BereketDan/CSECdev/assets/86808497/b99db4ac-cfeb-415f-a5eb-ae319e0f794d)
 
 
-Analyzing and reporting Page
+## Analyzing and reporting Page 📊
 
 
 ![image](https://github.com/BereketDan/CSECdev/assets/86808497/a5618cde-5b80-473b-9bad-ab10b8c86c0d)
 
 
-Desgin Process : using Figma
+## Desgin Process : using Figma
 
 ![image](https://github.com/BereketDan/CSECdev/assets/86808497/8dc612b8-f3ff-48d4-9115-8abd1fdc54f3)
 
