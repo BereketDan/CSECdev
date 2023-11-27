@@ -405,21 +405,26 @@
         </div>
       </div>
 <br>
+
+    
+<form method="POST" action="{% url 'event' %}">
+
     <div class="columns">
         <div class="column pt-6 pr-6">
-            <div class="column is-full"><input name="new_pass" class="input is-rounded is-fullwidth" type="text" placeholder="Event Name"></div>
+          {% csrf_token %}
+            <div class="column is-full"><input  class="input is-rounded is-fullwidth" type="text" placeholder="Event Name" name="eventName"></div>
             
-            <div class="column is-full"><input name="new_pass" class="input is-rounded is-fullwidth  pb-2" type="text" placeholder="Location"></div>
+            <div class="column is-full"><input  class="input is-rounded is-fullwidth  pb-2" type="text" placeholder="Location" name="location"></div>
 
-            <div class="column is-full"><input name="new_pass" class="input is-rounded is-fullwidth  pb-2" type="text" placeholder="Hour"></div>
+            <div class="column is-full"><input class="input is-rounded is-fullwidth  pb-2" type="text" placeholder="Hour" name="hour"></div>
             
-            <div class="column is-full"><input name="new_pass" class="input is-rounded is-fullwidth  pb-2" type="text" placeholder="Date"></div>
+            <div class="column is-full"><input class="input is-rounded is-fullwidth  pb-2" type="text" placeholder="Date" name="date"></div>
             <br>
-            <div class="column is-full"> <button class="button is-fullwidth is-rounded " style="background-color: #577CFF; color: white; border: none;  " ><div class="is-size-7" id="btn">save</div></button> </div>
+            <div class="column is-full"> <button type="submit" class="button is-fullwidth is-rounded " style="background-color: #577CFF; color: white; border: none;  " ><div class="is-size-7" id="btn">save</div></button> </div>
             <div class="column is-full"> <button class="button is-fullwidth is-rounded " style="background-color: #080B15; border: white 2px solid; color: white; " ><div class="is-size-7" id="btn">clear</div></button> </div>
              
         </div>
-
+      </form>
 
 
 

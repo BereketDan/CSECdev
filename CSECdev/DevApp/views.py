@@ -138,6 +138,17 @@ def feedback(request):
 def event(request):
     name = request.session.get('name')
     if name:
+        if request.method == 'POST':
+            eventName = request.POST.get('eventName')
+            location = request.POST.get('location')
+            hour = request.POST.get('hour')
+            date = request.POST.get('date')
+          
+
+            print(eventName,location,hour,date)
+            addEvent= Event(eventName=eventName, location=location,hour=hour, date = date )
+            addEvent.save()
+
         return render(request, "event.html")
     else:
         return redirect('login')
