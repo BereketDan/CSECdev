@@ -100,7 +100,8 @@ Login Page
 
 Members Page
 
-![image](https://github.com/BereketDan/CSECdev/assets/86808497/0b725164-f68b-4136-8df3-4b4587d541ee)
+![image](https://github.com/BereketDan/CSECdev/assets/86808497/74a8663f-f154-4bcb-b378-6fc089a1d0db)
+
 
 Adding new member page
 
