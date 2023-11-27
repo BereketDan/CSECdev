@@ -97,6 +97,10 @@ Login Page
 
 ![image](https://github.com/BereketDan/CSECdev/assets/86808497/34f7627a-a622-44a1-9ef7-422ddef193a8)
 
+Login in Mobile View
+
+![image](https://github.com/BereketDan/CSECdev/assets/86808497/46c2edae-7d08-4570-8170-f2c41aff968c)
+
 
 Members Page
 
