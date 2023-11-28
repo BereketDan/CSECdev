@@ -203,11 +203,13 @@ def dashboard(request):
     totalMember = Member.objects.count()
     male_no = Member.objects.filter(sex='Male').count()
     female_no = Member.objects.filter(sex='Female').count()
-    print(female_no,male_no)
+    latest_event = Event.objects.all().last()
+    print(latest_event)
     context = {
         "totalMember":totalMember,
         "female_no":female_no,
         "male_no": male_no,
+        "latest_event": latest_event,
     }
     if name:
         return render(request, "dashboard.html",context)
