@@ -201,8 +201,13 @@ def event(request):
 def dashboard(request):
     name = request.session.get('name')
     totalMember = Member.objects.count()
+    male_no = Member.objects.filter(sex='Male').count()
+    female_no = Member.objects.filter(sex='Female').count()
+    print(female_no,male_no)
     context = {
         "totalMember":totalMember,
+        "female_no":female_no,
+        "male_no": male_no,
     }
     if name:
         return render(request, "dashboard.html",context)
