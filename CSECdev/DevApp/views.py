@@ -95,14 +95,14 @@ def updateMemberRecord(request, id):
   userName = request.POST.get('userName')
   userId = request.POST.get('userId')
   depart = request.POST.get('depart')
-  Year = request.POST.get('year')
+  year = request.POST.get('year')
   user_sex = request.POST.get('user_sex')
   user_skill = request.POST.get('skill')
   member = Member.objects.get(id=id)
   member.fisrtname = userName
   member.ugr = userId
   member.department = depart
-  member.year = Year
+  member.year = year
   member.sex = user_sex
   member.skill = user_skill
 
