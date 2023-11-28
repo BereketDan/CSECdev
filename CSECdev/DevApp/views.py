@@ -3,8 +3,34 @@ from django.http import HttpResponse,HttpResponseRedirect
 from .models import *
 from django.template import loader
 from django.urls import reverse
-# Create your views here.
+# import telebot
+# from django.core.exceptions import PermissionDenied
+# from django.views.decorators.csrf import csrf_exempt
+# from datetime import datetime
 
+
+
+
+# TOKEN = '6949284535:AAHNR3sl6uJM8MrtDydf6AyiQhecbRQMQyc'
+# tbot = telebot.AsyncTeleBot(TOKEN)
+
+
+# @csrf_exempt
+# def bot(request):
+#     if request.META['CONTENT_TYPE'] == 'application/json':
+
+#         json_data = request.body.decode('utf-8')
+#         update = telebot.types.Update.de_json(json_data)
+#         tbot.process_new_updates([update])
+
+#         return HttpResponse("")
+
+#     else:
+#         raise PermissionDenied
+    
+# @tbot.message_handler(commands=['start'])
+# def greet(m):
+#     tbot.send_message(m.chat.id, "Hello")
 
 def login(request):
     mydata = User_auth.objects.all()
@@ -180,6 +206,41 @@ def settings(request):
     else:
         return redirect('login')
     
+
+
+
+
+# @bot.message_handler(commands=['start'])
+# def handle_start(message):
+#     bot.reply_to(message, """Hello 👋 \nWelcome to the CSEC Dev bot. \n CSEC Development Division Official Channel @csec_devs Join \n \n \n \n ⚡️ For feedback click  /feedback """)
+    
+    
+
+
+
+# @bot.message_handler(commands=['feedback'])
+# def handle_feedback(message):
+#     bot.reply_to(message, """Write Your feedback here ? """ )
+#     bot.register_next_step_handler(message, handle_feedback_Q)
+
+
+
+
+
+# def handle_feedback_Q(message):
+#     username_acc = message.from_user.username
+#     feed_msg =  message.text
+#     current_date = datetime.now().strftime("%Y-%m-%d")
+#     print(username_acc,feed_msg,current_date)
+#     return handle_close(message)
+    
+    
+
+
+# def handle_close(message):
+    
+  
+#     bot.reply_to(message, """Thanks for Your Comment """ )
 
 
 

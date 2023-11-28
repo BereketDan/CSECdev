@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'DevApp',
+
 ]
 
 MIDDLEWARE = [
@@ -127,4 +128,3 @@ STATICFILES_DIRS = [
 ]
 
 
-handler404 = 'DevApp.views.custom_404'

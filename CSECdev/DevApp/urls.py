@@ -14,7 +14,7 @@ urlpatterns = [
     path('settings/', views.settings, name = "settings"),
     path('logout/', views.logout, name = "logout"),
     path('event/deleteEvent/<int:id>/', views.deleteEvent, name = "deleteEvent"),
-   
+    # path('csebot/', views.bot, name="bot"),
     path('member/deleteMember/<int:id>/', views.deleteMember, name = "deleteMember"),
     path('member/updateMember/<int:id>/', views.updateMember, name = "updateMember"),
      path('update/updateMemberRecord/<int:id>', views.updateMemberRecord, name='updateMemberRecord')
