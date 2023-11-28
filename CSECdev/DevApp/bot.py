@@ -26,9 +26,12 @@ def handle_feedback(message):
 
 
 def handle_feedback_Q(message):
+    # feedback = Feedback.objects.all() 
     username_acc = message.from_user.username
     feed_msg =  message.text
     current_date = datetime.now().strftime("%Y-%m-%d")
+    addFeed = Member(Telegram_username=username_acc, message=feed_msg,messageDate=current_date)
+    addFeed.save()
     return handle_close(message)
     
     
