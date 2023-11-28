@@ -200,9 +200,12 @@ def event(request):
 
 def dashboard(request):
     name = request.session.get('name')
-    totalMember_number = Member.objects.count()
+    totalMember = Member.objects.count()
+    context = {
+        "totalMember":totalMember,
+    }
     if name:
-        return render(request, "dashboard.html")
+        return render(request, "dashboard.html",context)
     else:
         return redirect('login')
 
