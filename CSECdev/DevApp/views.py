@@ -217,6 +217,31 @@ def dashboard(request):
     Desktop_Dev = Member.objects.filter(skill='Desktop Dev').count()
 
 
+    softwarePer = (Software_Dev * 100)/totalMember
+    print(softwarePer)
+    
+    frontendPer = (Frontend_Dev * 100)/totalMember
+    print(frontendPer)
+    
+    UIUXPer = (UIUX_Desginer * 100)/totalMember
+    print(UIUXPer)
+    
+    backendPer = (Backend_Dev * 100)/totalMember
+    print(backendPer)
+
+    fullstackPer = (Fullstack_Dev * 100)/totalMember
+    print(fullstackPer)
+
+    botPer = (Bot_Dev * 100)/totalMember
+    print(botPer)
+
+    desktopPer = (Desktop_Dev * 100)/totalMember
+    print(desktopPer)
+
+    mobilePer = (Mobile_App_Dev * 100)/totalMember
+    print("new" , mobilePer)
+
+
 
     print(latest_event)
     context = {
@@ -233,6 +258,15 @@ def dashboard(request):
         "Bot_Dev" : Bot_Dev,
         "UIUX_Desginer" : UIUX_Desginer,
         "Desktop_Dev" : Desktop_Dev,
+
+        "mobilePer" : mobilePer,
+        "desktopPer" : desktopPer,
+        "botPer" : botPer,
+        "fullstackPer" : fullstackPer,
+        "backendPer" : backendPer,
+        "UIUXPer": UIUXPer,
+        "frontendPer" : frontendPer,
+        "softwarePer" : softwarePer,
 
 
 
