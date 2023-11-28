@@ -20,6 +20,23 @@
 #event-nav{
     color: rgb(66, 120, 220) !important;
 }
+@media only screen and (max-width: 600px) {
+
+    #event-input-div{
+      padding-right: 1rem !important;
+      padding-left: 1rem !important;
+      padding-bottom: 40px;
+    }
+    #manage-txt{
+      margin-top: -3rem;
+    }
+    
+    #float-btn{
+      margin-left: -8.7rem;
+          margin-top: 20px;
+          width: 78vw !important;
+    }
+}
 </style>
 
 <script>
@@ -390,7 +407,7 @@
     
     
       <div class="columns is-flex-direction-row is-justify-content-space-between"> 
-        <div style="color:  #6c717e; font-size: 1rem; font-weight: normal; padding-top: 0.6rem; margin-left: -7.4rem;">Manage your event here</div>
+        <div style="color:  #6c717e; font-size: 1rem; font-weight: normal; padding-top: 0.6rem; margin-left: -7.4rem;" id="manage-txt">Manage your event here</div>
         
         
         <div id="float-btn" class="button is-rounded  js-modal-trigger" style="background-color: #080B15; border: white 2px solid; color: white;"  data-target="modal-js-example">
@@ -410,7 +427,7 @@
 <form method="POST" action="{% url 'event' %}">
 
     <div class="columns">
-        <div class="column pt-6 pr-6">
+        <div class="column pt-6 pr-6" id="event-input-div">
           {% csrf_token %}
             <div class="column is-full"><input  class="input is-rounded is-fullwidth" type="text" placeholder="Event Name" name="eventName"></div>
             

@@ -6,6 +6,27 @@
     #dashboard-nav{
         color: rgb(66, 120, 220) !important;
     }
+    @media only screen and (max-width: 600px) {
+       #color-con{
+        height: auto !important;
+       }
+
+       #highLow{
+        height: 13vh !important;
+       }
+       #total-con{
+        width: 90vw !important;
+       }
+       #upcoming-con{
+        margin-left: -23rem;
+       }
+       #event-con{
+        margin-left: 0rem !important;
+        width: 90vw !important;
+       }
+   
+
+}
 </style>
 <center>
     <div class="columns">
@@ -22,7 +43,7 @@
                  
 
           </div>
-          <div class="column " style="height: 30vh;">
+          <div class="column " style="height: 30vh;" id="color-con">
             
 
 
@@ -42,7 +63,7 @@
             
               </div>
           </div>
-          <div class="column " style="height: 10vh; background-color: #151B2D; border-radius: 15px;">
+          <div class="column " style="height: 10vh; background-color: #151B2D; border-radius: 15px;" id="highLow">
             <div class="columns is-flex-direction-row is-justify-content-space-around"> 
                 <div style="color:  #8790a8; font-size: 1rem; " class="pt-5">
                     High
@@ -101,7 +122,7 @@
                 </div>
 
 
-                <div class="column is-two-fifths"  style="background-color: #151B2D; height: 40vh; border-radius: 20px; ">
+                <div class="column is-two-fifths"  style="background-color: #151B2D; height: 40vh; border-radius: 20px; " id="total-con">
                   <div class="column has-text-weight-semibold" style="font-size: 6.5rem; color: cornflowerblue;">{{totalMember}}</div>
                   <div class="column">
                       <div class="title has-text-white">Total</div>
@@ -121,10 +142,10 @@
 
             </div>
             <div class="columns is-flex-direction-row is-justify-content-space-between"> 
-                <div style=" padding-top: 20px; margin-left: 7.4rem; padding-bottom: 30px;">
+                <div style=" padding-top: 20px; margin-left: 7.4rem; padding-bottom: 30px;" >
                 
-                    <div class="is-size-4 has-text-weight-semibold" style="color: cornflowerblue;">Upcoming</div>
-                    <div class="subtile is-size-5">Event</div>
+                    <div class="is-size-4 has-text-weight-semibold" style="color: cornflowerblue;" id="upcoming-con">Upcoming</div>
+                    <div class="subtile is-size-5" id="upcoming-con">Event</div>
                     
                 </div>
                 
@@ -134,7 +155,7 @@
                 </div>
               </div>
 
-            <div class="column has-text-left p-0 pl-4 " style="margin-left: 5rem;  background-color: #151B2D; height: 25vh; border-radius: 20px; width: 90%; font-size: 0.9rem !important; ">
+            <div id="event-con" class="column has-text-left p-0 pl-4 " style="margin-left: 5rem;  background-color: #151B2D; height: 25vh; border-radius: 20px; width: 90%; font-size: 0.9rem !important; ">
               
               <div class="column pb-0  " style="padding-top: 30px; color:  #7889bb;">>>> Event Title :<span style=" color:rgb(121, 121, 121); padding: 8px 14px;  margin-left: 1px;">  {{latest_event.eventName}} </span>
               </div>

@@ -5,6 +5,23 @@
 <style>
   #member-nav{
     color: rgb(66, 120, 220) !important;
+
+}
+
+
+@media only screen and (max-width: 600px) {
+        #manage-txt{
+          margin-top: -3rem;
+  
+        }
+        #btn-add{
+          margin-left: -9.6rem;
+          margin-top: 20px;
+          width: 100vw !important;
+        
+        
+        }
+
 }
 </style>
 <center>
@@ -359,11 +376,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   <div class="columns is-flex-direction-row is-justify-content-space-between"> 
-    <div style="color:  #6c717e; font-size: 1rem; font-weight: normal; padding-top: 0.6rem; margin-left: -9.8rem;">Manage your user here</div>
+    <div id="manage-txt" style="color:  #6c717e; font-size: 1rem; font-weight: normal; padding-top: 0.6rem; margin-left: -9.8rem;">Manage your user here</div>
     
     
-    <div class="buttons">
-      <a class="button is-primary js-modal-trigger"  data-target="modal-js-example" style="border-radius: 5px; background-color: cornflowerblue;  ">
+    <div  class="buttons">
+      <a id="btn-add" class="button is-primary js-modal-trigger"  data-target="modal-js-example" style="border-radius: 5px; background-color: cornflowerblue;  ">
         <strong style="font-size: 0.9rem; font-weight:normal; padding-left: 10px; padding-right: 10px;">+ Add User</strong>
       </a>
     
