@@ -204,12 +204,38 @@ def dashboard(request):
     male_no = Member.objects.filter(sex='Male').count()
     female_no = Member.objects.filter(sex='Female').count()
     latest_event = Event.objects.all().last()
+
+    #now for member skill
+
+    Software_Dev = Member.objects.filter(skill='Software Dev').count()
+    Frontend_Dev = Member.objects.filter(skill='Frontend Dev').count()
+    Backend_Dev = Member.objects.filter(skill='Backend Dev').count()
+    Fullstack_Dev = Member.objects.filter(skill='Fullstack Dev').count()
+    Mobile_App_Dev = Member.objects.filter(skill='Mobile App Dev').count()
+    Bot_Dev = Member.objects.filter(skill='Bot Dev').count()
+    UIUX_Desginer = Member.objects.filter(skill='UI/UX Desginer').count()
+    Desktop_Dev = Member.objects.filter(skill='Desktop Dev').count()
+
+
+
     print(latest_event)
     context = {
         "totalMember":totalMember,
         "female_no":female_no,
         "male_no": male_no,
         "latest_event": latest_event,
+
+        "Software_Dev": Software_Dev,
+        "Frontend_Dev" : Frontend_Dev,
+        "Backend_Dev" : Backend_Dev,
+        "Fullstack_Dev" : Fullstack_Dev,
+        "Mobile_App_Dev": Mobile_App_Dev,
+        "Bot_Dev" : Bot_Dev,
+        "UIUX_Desginer" : UIUX_Desginer,
+        "Desktop_Dev" : Desktop_Dev,
+
+
+
     }
     if name:
         return render(request, "dashboard.html",context)
