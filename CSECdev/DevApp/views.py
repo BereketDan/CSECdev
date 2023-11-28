@@ -134,6 +134,8 @@ def base(request):
 
 def member(request):
     memberList = Member.objects.all() 
+    totalMember_number = Member.objects.count()
+    print(totalMember_number)
     name = request.session.get('name')
     if name:
         if request.method == 'POST':
@@ -152,7 +154,7 @@ def member(request):
              
             return redirect('member')
 
-        return render(request, "member.html" ,{'memberList': memberList})
+        return render(request, "member.html" ,{'memberList': memberList,"totalMember_number":totalMember_number})
     else:
         return redirect('login') 
     
@@ -198,7 +200,7 @@ def event(request):
 
 def dashboard(request):
     name = request.session.get('name')
-    # dash = Event.objects.all() 
+    totalMember_number = Member.objects.count()
     if name:
         return render(request, "dashboard.html")
     else:
