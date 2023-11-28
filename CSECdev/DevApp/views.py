@@ -198,6 +198,7 @@ def event(request):
 
 def dashboard(request):
     name = request.session.get('name')
+    # dash = Event.objects.all() 
     if name:
         return render(request, "dashboard.html")
     else:
