@@ -100,6 +100,11 @@ def updateMemberRecord(request, id):
   user_skill = request.POST.get('skill')
   member = Member.objects.get(id=id)
   member.fisrtname = userName
+  member.ugr = userId
+  member.department = depart
+  member.year = Year
+  member.sex = user_sex
+  member.skill = user_skill
 
   member.save()
   return HttpResponseRedirect(reverse('member'))
