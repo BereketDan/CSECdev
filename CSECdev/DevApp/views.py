@@ -3,13 +3,23 @@ from django.http import HttpResponse,HttpResponseRedirect
 from .models import *
 from django.template import loader
 from django.urls import reverse
+import gspread
+import re
+
+# gc = gspread.service_account()
+
+# Open Spreadsheet by name
+
+# Open Spreadsheet by url
+# sh = gc.open_by_url("https://docs.google.com/spreadsheets/d/1bPxXBwwoe26VNvQzb-7BR85l-4kRdn-zKgSEOoN2S6o/edit#gid=0")
+# worksheet = sh.worksheet("Students")
 # import telebot
 # from django.core.exceptions import PermissionDenied
 # from django.views.decorators.csrf import csrf_exempt
 # from datetime import datetime
 
 
-
+# print(worksheet.get_all_values())
 
 # TOKEN = '6949284535:AAHNR3sl6uJM8MrtDydf6AyiQhecbRQMQyc'
 # tbot = telebot.AsyncTeleBot(TOKEN)
@@ -56,10 +66,10 @@ def login(request):
             error_message = 'Invalid username or password.'
             return render(request, 'login.html', {'error_message': error_message})  
 
-            
-
-
+        
     return render(request, "login.html")
+
+
 
 def logout(request):
     request.session.flush()
@@ -286,6 +296,33 @@ def settings(request):
     
 
 
+
+def addUser(request):
+    name = request.session.get('name')
+    if name:
+          if request.method == 'POST':
+            user_name = request.POST.get('user_name')
+            user_password = request.POST.get('user_password')
+            user_status = request.POST.get('user_status')
+            error_msg = "Please insert correct data"
+            context = {
+                "error_msg" : error_msg,
+            }
+            error_msg = "Please insert correct data"
+
+            if not re.match(r'^[A-Za-z\s]+$', user_name) and re.match(r'^[A-Za-z\s]+$', user_status):
+                return render(request, "settings.html",context)
+            
+            else:
+                addUsers = User_auth(userName=user_name, password=user_password,status=user_status)
+                addUsers.save()
+            
+
+         
+          return render(request, "settings.html")
+    else:
+        return redirect('login')
+    
 
 
 # @bot.message_handler(commands=['start'])

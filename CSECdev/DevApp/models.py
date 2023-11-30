@@ -15,6 +15,7 @@ class Member(models.Model):
 class User_auth(models.Model):
   userName = models.CharField(max_length=255)
   password = models.CharField(max_length=255)
+  status = models.CharField(max_length=255)
   def __str__(self):
         return self.userName
 
@@ -27,11 +28,7 @@ class Event(models.Model):
         return self.eventName
 
 
-class Feedback(models.Model):
-  Telegram_username = models.CharField(max_length=255)
-  message = models.CharField(max_length=255)
-  messageDate = models.CharField(max_length=255)
-  def __str__(self):
-        return self.Telegram_username
+# 
+
 
   
